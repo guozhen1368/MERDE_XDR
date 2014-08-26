@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<policy> 
+   <msgtype83 name='AAAInfoPeg'> 
+	 <s1 type='B' len='1' fieldnum='0' name='query_type'></s1> 
+	 <s2 type='B' len='1' fieldnum='0' name='useriplen'></s2>
+	 <s3 type='ip' len='0' fieldnum='0' name='userip'></s3> 
+	 <s4 type='B' len='1' fieldnum='0' name='userip_prefix'></s4>
+   </msgtype83> 
+   
+   <msgtypec1 name='DPIHeartBeat'> 
+	 <s1 type='B' len='1' fieldnum='1' name='devname_len'>
+		<b1 type='s' len='0' fieldnum='0' name='devname'></b1>
+	 </s1> 	 
+   </msgtypec1> 
+   
+   <msgtypec2 name='DPIRequest'> 
+	 <s1 type='B' len='1' fieldnum='2' name='messagetype_num'>
+		<b1 type='B' len='1' fieldnum='0' name='messagetype'></b1>
+		<b2 type='I' len='4' fieldnum='0' name='message_serialno'></b2>
+	 </s1>
+   </msgtypec2> 
+   
+   <msgtypec5 name='DPIResponse'> 
+	 <s1 type='I' len='4' fieldnum='0' name='softwareversion'></s1> 
+	 <s2 type='B' len='1' fieldnum='1' name='deploysitenamelen'>
+		<b1 type='s' len='0' fieldnum='0' name='deploysitename'></b1>
+	  </s2>
+	 <s3 type='B' len='1' fieldnum='0' name='deploy_mode'></s3>
+	 <s4 type='H' len='2' fieldnum='0' name='total_capability'></s4>
+	 <s5 type='B' len='1' fieldnum='0' name='slot_num'></s5>
+	 <s6 type='B' len='1' fieldnum='0' name='preprocslotnum'></s6>
+	 <s7 type='B' len='1' fieldnum='0' name='analysisslotnum'></s7>
+	 <s8 type='B' len='1' fieldnum='0' name='gpslotnum'></s8>
+	 <s9 type='B' len='1' fieldnum='2' name='portstypenum'>
+		<b1 type='B' len='1' fieldnum='0' name='porttype'></b1>
+		<b2 type='B' len='1' fieldnum='3' name='portsnum'>
+			<c1 type='B' len='1' fieldnum='0' name='portno'></c1>
+			<c2 type='B' len='1' fieldnum='1' name='portdesclen'>
+				<d1 type='s' len='0' fieldnum='0' name='portdescription'></d1>
+			 </c2>
+			<c3 type='B' len='1' fieldnum='0' name='mlinkid'></c3>
+			<c4 type='B' len='1' fieldnum='1' name='mlink_desclen'>
+				<d1 type='s' len='0' fieldnum='0' name='mlink_desc'></d1>
+			 </c4>
+		  </b2>
+	  </s9>
+   </msgtypec5> 
+   
+   <msgtypec6 name='DPIDResponse2'> 
+	 <s1 type='B' len='1' fieldnum='3' name='totalports_num'>
+		<b1 type='B' len='1' fieldnum='0' name='portno'></b1>
+		<b2 type='B' len='1' fieldnum='1' name='portinfolen'>
+			<c1 type='s' len='0' fieldnum='0' name='portno'></c1>
+		 </b2>
+		<b3 type='B' len='1' fieldnum='0' name='portusage'></b3>
+	 </s1>
+	 <s2 type='H' len='2' fieldnum='2' name='totalcpuno'>
+		<b1 type='H' len='2' fieldnum='0' name='cpu_no'></b1>
+		<b2 type='B' len='1' fieldnum='0' name='cpu_usage'></b2>
+	  </s2>
+   </msgtypec6> 
+   
+   <msgtype3 name='URLquery'> 
+	 <s1 type='H' len='2' fieldnum='2' name='webhost_num'>
+		<b1 type='B' len='1' fieldnum='1' name='webhostlen'>
+			<c1 type='s' len='0' fieldnum='0' name='webhost'></c1>
+		 </b1>
+		<b2 type='H' len='2' fieldnum='0' name='hit_frquence'></b2>
+	 </s1>
+   </msgtype3> 
+   
+</policy> 
+

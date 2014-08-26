@@ -1,0 +1,95 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+AsyncCommandGet	.\redis_help.cpp	/^int RedisHelp::AsyncCommandGet(redisCallbackFn *fn, void *privdata, const char *key, size_t keylen)$/;"	f	class:RedisHelp
+AsyncCommandSet	.\redis_help.cpp	/^int RedisHelp::AsyncCommandSet(const char *key, size_t keylen, const char *value, size_t valueLen)$/;"	f	class:RedisHelp
+AsyncIncrGet	.\redis_help.cpp	/^int RedisHelp::AsyncIncrGet(redisCallbackFn *fn, void *privdata, const char *key, size_t keylen)$/;"	f	class:RedisHelp
+Channel	.\redis\my_loop.h	/^typedef struct Channel{$/;"	s
+Channel	.\redis\my_loop.h	/^}Channel;$/;"	t	typeref:struct:Channel
+ChannelList	.\redis\my_loop.h	/^	typedef std::vector<Channel*> ChannelList;$/;"	t	class:EventLoop
+ChannelList	.\redis\my_poll.h	/^	typedef std::vector<Channel*> ChannelList;$/;"	t	class:EPoller
+ChannelMap	.\redis\my_poll.h	/^	typedef std::map<int, Channel*> ChannelMap;$/;"	t	class:EPoller
+Channelmap	.\redis\my_loop.h	/^	typedef std::map<int, Channel*> Channelmap;$/;"	t	class:EventLoop
+EPoller	.\redis\my_poll.cpp	/^EPoller::EPoller()$/;"	f	class:EPoller
+EPoller	.\redis\my_poll.h	/^class EPoller : boost::noncopyable$/;"	c
+EventCallBack	.\redis\my_loop.h	/^typedef void EventCallBack(class EventLoop *el, int fd, void *privdata, int mask);$/;"	t
+EventList	.\redis\my_poll.h	/^	typedef std::vector<struct epoll_event> EventList;$/;"	t	class:EPoller
+EventLoop	.\redis\my_loop.cpp	/^EventLoop::EventLoop()$/;"	f	class:EventLoop
+EventLoop	.\redis\my_loop.h	/^class EventLoop : boost::noncopyable$/;"	c
+MY_NoneEvent	.\redis\my_poll.cpp	/^const int EPoller::MY_NoneEvent = 0;$/;"	m	class:EPoller	file:
+MY_NoneEvent	.\redis\my_poll.h	/^	static const int MY_NoneEvent;$/;"	m	class:EPoller
+MY_READABLE	.\redis\my_poll.cpp	/^const int EPoller::MY_READABLE = EPOLLIN | EPOLLPRI;$/;"	m	class:EPoller	file:
+MY_READABLE	.\redis\my_poll.h	/^	static const int MY_READABLE;$/;"	m	class:EPoller
+MY_WRITABLE	.\redis\my_poll.cpp	/^const int EPoller::MY_WRITABLE = EPOLLOUT;$/;"	m	class:EPoller	file:
+MY_WRITABLE	.\redis\my_poll.h	/^	static const int MY_WRITABLE;$/;"	m	class:EPoller
+RedisHelp	.\redis_help.cpp	/^RedisHelp::RedisHelp(EventLoop *loop, char *ip, int port)$/;"	f	class:RedisHelp
+RedisHelp	.\redis_help.h	/^class RedisHelp : boost::noncopyable$/;"	c
+__HIREDIS_MY_AE_H__	.\redis\my_ae.h	32;"	d
+__MY_LOOP_H__	.\redis\my_loop.h	2;"	d
+__MY_POLL_H__	.\redis\my_poll.h	2;"	d
+__MY_REDIS_HELP_H__	.\redis_help.h	2;"	d
+activeChannels_	.\redis\my_loop.h	/^	ChannelList activeChannels_;$/;"	m	class:EventLoop
+channels_	.\redis\my_loop.h	/^	Channelmap channels_;$/;"	m	class:EventLoop
+connectCallback	.\main.cpp	/^void connectCallback(const redisAsyncContext *c, int status) {$/;"	f
+connectCallback	.\redis_help.cpp	/^static void connectCallback(const redisAsyncContext *c, int status) {$/;"	f	file:
+context	.\redis\my_ae.h	/^    redisAsyncContext *context;$/;"	m	struct:redisAeEvents
+context_	.\redis_help.h	/^	redisAsyncContext *context_;$/;"	m	class:RedisHelp
+createFileEvent	.\redis\my_loop.cpp	/^void EventLoop::createFileEvent(int fd, int events, EventCallBack *callback, void *privdata)$/;"	f	class:EventLoop
+currentActiveChannel_	.\redis\my_loop.h	/^	Channel* currentActiveChannel_;$/;"	m	class:EventLoop
+deleteFileEvent	.\redis\my_loop.cpp	/^void EventLoop::deleteFileEvent(int fd, int events)$/;"	f	class:EventLoop
+disconnectCallback	.\main.cpp	/^void disconnectCallback(const redisAsyncContext *c, int status) {$/;"	f
+disconnectCallback	.\redis_help.cpp	/^static void disconnectCallback(const redisAsyncContext *c, int status) {$/;"	f	file:
+epollfd_	.\redis\my_poll.h	/^	int epollfd_;$/;"	m	class:EPoller
+events	.\redis\my_loop.h	/^	int  events;$/;"	m	struct:Channel
+events_	.\redis\my_poll.h	/^	EventList events_;$/;"	m	class:EPoller
+fd	.\redis\my_ae.h	/^    int fd;$/;"	m	struct:redisAeEvents
+fd	.\redis\my_loop.h	/^	int  fd;$/;"	m	struct:Channel
+fillActiveChannels	.\redis\my_poll.cpp	/^void EPoller::fillActiveChannels(int numEvents, ChannelList* activeChannels) const$/;"	f	class:EPoller
+getCallback	.\main.cpp	/^void getCallback(redisAsyncContext *c, void *r, void *privdata) {$/;"	f
+getTl	.\redis_help.h	/^	void *getTl(){return tl_;}$/;"	f	class:RedisHelp
+index	.\redis\my_loop.h	/^	int  index;$/;"	m	struct:Channel
+init	.\redis_help.cpp	/^bool RedisHelp::init()$/;"	f	class:RedisHelp
+ip_	.\redis_help.h	/^	std::string ip_;$/;"	m	class:RedisHelp
+kAdded	.\redis\my_poll.cpp	/^	const int kAdded = 1;$/;"	m	namespace:__anon1	file:
+kDeleted	.\redis\my_poll.cpp	/^	const int kDeleted = 2;$/;"	m	namespace:__anon1	file:
+kInitEventListSize	.\redis\my_poll.h	/^	static const int kInitEventListSize = 16;$/;"	m	class:EPoller
+kNew	.\redis\my_poll.cpp	/^	const int kNew = -1;$/;"	m	namespace:__anon1	file:
+kPollTimeMs	.\redis\my_loop.cpp	/^const int kPollTimeMs = 10000;$/;"	v
+loop	.\main.cpp	/^static EventLoop *loop;$/;"	v	file:
+loop	.\redis\my_ae.h	/^    EventLoop *loop;$/;"	m	struct:redisAeEvents
+loop	.\redis\my_loop.cpp	/^void EventLoop::loop()$/;"	f	class:EventLoop
+loop_	.\redis_help.h	/^	EventLoop *loop_;$/;"	m	class:RedisHelp
+looping_	.\redis\my_loop.h	/^	bool looping_; \/* atomic *\/$/;"	m	class:EventLoop
+main	.\main.cpp	/^int main (int argc, char **argv) {$/;"	f
+poll	.\redis\my_poll.cpp	/^int EPoller::poll(int timeoutMs, ChannelList* activeChannels)$/;"	f	class:EPoller
+poller_	.\redis\my_loop.h	/^	EPoller poller_;$/;"	m	class:EventLoop
+port_	.\redis_help.h	/^	int port_;$/;"	m	class:RedisHelp
+privdata	.\redis\my_loop.h	/^	void *privdata;$/;"	m	struct:Channel
+quit	.\redis\my_loop.cpp	/^void EventLoop::quit()$/;"	f	class:EventLoop
+quit_	.\redis\my_loop.h	/^	bool quit_; \/* atomic *\/$/;"	m	class:EventLoop
+readCallback	.\redis\my_loop.h	/^	EventCallBack *readCallback;$/;"	m	struct:Channel
+reading	.\redis\my_ae.h	/^    int reading, writing;$/;"	m	struct:redisAeEvents
+redisAeAddRead	.\redis\my_ae.h	/^static void redisAeAddRead(void *privdata) {$/;"	f
+redisAeAddWrite	.\redis\my_ae.h	/^static void redisAeAddWrite(void *privdata) {$/;"	f
+redisAeAttach	.\redis\my_ae.h	/^static int redisAeAttach(EventLoop *loop, redisAsyncContext *ac) {$/;"	f
+redisAeCleanup	.\redis\my_ae.h	/^static void redisAeCleanup(void *privdata) {$/;"	f
+redisAeDelRead	.\redis\my_ae.h	/^static void redisAeDelRead(void *privdata) {$/;"	f
+redisAeDelWrite	.\redis\my_ae.h	/^static void redisAeDelWrite(void *privdata) {$/;"	f
+redisAeEvents	.\redis\my_ae.h	/^typedef struct redisAeEvents {$/;"	s
+redisAeEvents	.\redis\my_ae.h	/^} redisAeEvents;$/;"	t	typeref:struct:redisAeEvents
+redisAeReadEvent	.\redis\my_ae.h	/^static void redisAeReadEvent(EventLoop *el, int fd, void *privdata, int mask) {$/;"	f
+redisAeWriteEvent	.\redis\my_ae.h	/^static void redisAeWriteEvent(EventLoop *el, int fd, void *privdata, int mask) {$/;"	f
+redis_time_cb	.\redis_help.cpp	/^static void redis_time_cb(unsigned int s, unsigned int ns,$/;"	f	file:
+removeEvent	.\redis\my_poll.cpp	/^void EPoller::removeEvent(Channel* channel)$/;"	f	class:EPoller
+revents	.\redis\my_loop.h	/^	int  revents;$/;"	m	struct:Channel
+tl_	.\redis_help.h	/^	void *tl_;$/;"	m	class:RedisHelp
+updataEvent	.\redis\my_poll.cpp	/^void EPoller::updataEvent(Channel* channel)$/;"	f	class:EPoller
+update	.\redis\my_poll.cpp	/^void EPoller::update(int operation, Channel* channel)$/;"	f	class:EPoller
+writeCallback	.\redis\my_loop.h	/^	EventCallBack *writeCallback;$/;"	m	struct:Channel
+writing	.\redis\my_ae.h	/^    int reading, writing;$/;"	m	struct:redisAeEvents
+~EPoller	.\redis\my_poll.cpp	/^EPoller::~EPoller()$/;"	f	class:EPoller
+~EventLoop	.\redis\my_loop.cpp	/^EventLoop::~EventLoop()$/;"	f	class:EventLoop
+~RedisHelp	.\redis_help.cpp	/^RedisHelp::~RedisHelp()$/;"	f	class:RedisHelp

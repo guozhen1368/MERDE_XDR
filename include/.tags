@@ -1,0 +1,1169 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ADAPTER_CS_IOCTL_CLEAR_RQ	.\adapter_cs.h	57;"	d
+ADAPTER_CS_IOCTL_CLEAR_TQ	.\adapter_cs.h	58;"	d
+ADAPTER_CS_IOCTL_CLOSE_SOCKET	.\adapter_cs.h	56;"	d
+ADAPTER_SS_IOCTL_DISCADDR	.\adapter_ss.h	41;"	d
+ADAPTER_SS_IOCTL_GETADDR	.\adapter_ss.h	40;"	d
+AFX_EXT_CLASS	.\os.h	48;"	d
+AFX_EXT_CLASS	.\os.h	52;"	d
+APHash	.\hash.h	/^static __inline unsigned int APHash(char* str, unsigned int len)$/;"	f
+APHashUL	.\hash.h	/^static __inline unsigned long APHashUL(unsigned long val, unsigned int bits)$/;"	f
+BKDRHash	.\hash.h	/^static __inline unsigned int BKDRHash(char* str, unsigned int len)$/;"	f
+BKDRHashUL	.\hash.h	/^static __inline unsigned long BKDRHashUL(unsigned long val, unsigned int bits)$/;"	f
+BOOL	.\os.h	/^typedef unsigned int    BOOL;$/;"	t
+BPHash	.\hash.h	/^static __inline unsigned int BPHash(char* str, unsigned int len)$/;"	f
+BPHashUL	.\hash.h	/^static __inline unsigned long BPHashUL(unsigned long val, unsigned int bits)$/;"	f
+BYTE	.\os.h	/^typedef unsigned char   BYTE;$/;"	t
+CLOSESOCKET	.\os.h	163;"	d
+CLOSESOCKET	.\os.h	165;"	d
+CMD_CHAN_SCAN	.\pkttypes.h	238;"	d
+CMD_CLR_CH_STAT_INFO	.\pkttypes.h	261;"	d
+CMD_CLR_LINE_STAT_INFO	.\pkttypes.h	253;"	d
+CMD_CLR_PORT_STAT_INFO	.\pkttypes.h	255;"	d
+CMD_CQ_CDRDATA	.\pkttypes.h	276;"	d
+CMD_CQ_CDR_START	.\pkttypes.h	274;"	d
+CMD_CQ_CDR_STOP	.\pkttypes.h	275;"	d
+CMD_CQ_KEEPALIVE	.\pkttypes.h	280;"	d
+CMD_CT_CDRDATA	.\pkttypes.h	273;"	d
+CMD_CT_KEEPALIVE	.\pkttypes.h	279;"	d
+CMD_CT_START	.\pkttypes.h	271;"	d
+CMD_CT_STOP	.\pkttypes.h	272;"	d
+CMD_DEL_BERT_CFG	.\pkttypes.h	243;"	d
+CMD_DEL_PORT_CFG	.\pkttypes.h	220;"	d
+CMD_DOWNLOAD_CH_CFGFILE	.\pkttypes.h	223;"	d
+CMD_DOWNLOAD_MATRIX_CFGFILE	.\pkttypes.h	235;"	d
+CMD_DOWNLOAD_PORT_CFGFILE	.\pkttypes.h	221;"	d
+CMD_GAIN_SCAN	.\pkttypes.h	237;"	d
+CMD_GET_BERT_CFG	.\pkttypes.h	241;"	d
+CMD_GET_CALL_TRACE	.\pkttypes.h	264;"	d
+CMD_GET_CH_CFG	.\pkttypes.h	259;"	d
+CMD_GET_CH_STAT_INFO	.\pkttypes.h	260;"	d
+CMD_GET_CLK_TYPE	.\pkttypes.h	213;"	d
+CMD_GET_DEV_ID	.\pkttypes.h	225;"	d
+CMD_GET_DEV_MODE	.\pkttypes.h	229;"	d
+CMD_GET_ETHER_INFO	.\pkttypes.h	201;"	d
+CMD_GET_GATEWAY_IP	.\pkttypes.h	207;"	d
+CMD_GET_GLOBAL_BERT_CFG	.\pkttypes.h	239;"	d
+CMD_GET_GLOBAL_PORT_CFG	.\pkttypes.h	216;"	d
+CMD_GET_HW_DESCRIPTION	.\pkttypes.h	199;"	d
+CMD_GET_HW_MODEL	.\pkttypes.h	195;"	d
+CMD_GET_HW_SERIAL_NUM	.\pkttypes.h	198;"	d
+CMD_GET_HW_VERSION	.\pkttypes.h	196;"	d
+CMD_GET_LINE_STAT_INFO	.\pkttypes.h	252;"	d
+CMD_GET_MAC	.\pkttypes.h	203;"	d
+CMD_GET_NTP_MODE	.\pkttypes.h	211;"	d
+CMD_GET_PACK_TYPE	.\pkttypes.h	227;"	d
+CMD_GET_PORTS	.\pkttypes.h	215;"	d
+CMD_GET_PORT_CFG	.\pkttypes.h	218;"	d
+CMD_GET_PORT_MATRIX_CFG	.\pkttypes.h	233;"	d
+CMD_GET_PORT_PFM_RESULT	.\pkttypes.h	257;"	d
+CMD_GET_PORT_SDH_MATRIX_CFG	.\pkttypes.h	231;"	d
+CMD_GET_PORT_STAT_INFO	.\pkttypes.h	254;"	d
+CMD_GET_RAW_DATA	.\pkttypes.h	262;"	d
+CMD_GET_RT_VOICE	.\pkttypes.h	263;"	d
+CMD_GET_SERVER_IP	.\pkttypes.h	205;"	d
+CMD_GET_SW_VERSION	.\pkttypes.h	197;"	d
+CMD_GET_SYS_RES_REP	.\pkttypes.h	251;"	d
+CMD_GET_SYS_TIME	.\pkttypes.h	209;"	d
+CMD_INSERT_ERROR	.\pkttypes.h	246;"	d
+CMD_RNVR_CMD_AL_REPLAY_START	.\pkttypes.h	310;"	d
+CMD_RNVR_CMD_AL_REPLAY_STOP	.\pkttypes.h	311;"	d
+CMD_RNVR_CMD_GETALARMJPG	.\pkttypes.h	312;"	d
+CMD_RNVR_CMD_GET_CFG	.\pkttypes.h	314;"	d
+CMD_RNVR_CMD_GET_DEVCFG	.\pkttypes.h	316;"	d
+CMD_RNVR_CMD_GET_PERIODPHOTO	.\pkttypes.h	318;"	d
+CMD_RNVR_CMD_GET_SWITCH_OUT	.\pkttypes.h	320;"	d
+CMD_RNVR_CMD_PTZCONTROL	.\pkttypes.h	313;"	d
+CMD_RNVR_CMD_REALPLAY_START	.\pkttypes.h	308;"	d
+CMD_RNVR_CMD_REALPLAY_STOP	.\pkttypes.h	309;"	d
+CMD_RNVR_CMD_SET_CFG	.\pkttypes.h	315;"	d
+CMD_RNVR_CMD_SET_DEVCFG	.\pkttypes.h	317;"	d
+CMD_RNVR_CMD_SET_SWITCH_OUT	.\pkttypes.h	319;"	d
+CMD_RNVR_DATA_ALARM	.\pkttypes.h	296;"	d
+CMD_RNVR_DATA_ALARM_IN	.\pkttypes.h	304;"	d
+CMD_RNVR_DATA_ALARM_IN_CLEAR	.\pkttypes.h	305;"	d
+CMD_RNVR_DATA_AUDIO	.\pkttypes.h	295;"	d
+CMD_RNVR_DATA_CONNECT	.\pkttypes.h	298;"	d
+CMD_RNVR_DATA_DISCONNECT	.\pkttypes.h	299;"	d
+CMD_RNVR_DATA_EVENT	.\pkttypes.h	303;"	d
+CMD_RNVR_DATA_IPCCONNECT	.\pkttypes.h	300;"	d
+CMD_RNVR_DATA_IPCDISCONNECT	.\pkttypes.h	301;"	d
+CMD_RNVR_DATA_PERIODPHOTO	.\pkttypes.h	302;"	d
+CMD_RNVR_DATA_PHOTO	.\pkttypes.h	297;"	d
+CMD_RNVR_DATA_VIDEO	.\pkttypes.h	294;"	d
+CMD_RNVR_KEEPALIVE	.\pkttypes.h	306;"	d
+CMD_RNVR_UNKNOWN_HANDLE	.\pkttypes.h	307;"	d
+CMD_SERVER_RAWDATA	.\pkttypes.h	278;"	d
+CMD_SERVER_RAW_QUERY	.\pkttypes.h	277;"	d
+CMD_SET_BERT_CFG	.\pkttypes.h	242;"	d
+CMD_SET_CLK_TYPE	.\pkttypes.h	214;"	d
+CMD_SET_DEV_ID	.\pkttypes.h	226;"	d
+CMD_SET_DEV_MODE	.\pkttypes.h	230;"	d
+CMD_SET_ETHER_INFO	.\pkttypes.h	202;"	d
+CMD_SET_GATEWAY_IP	.\pkttypes.h	208;"	d
+CMD_SET_GLOBAL_BERT_CFG	.\pkttypes.h	240;"	d
+CMD_SET_GLOBAL_PORT_CFG	.\pkttypes.h	217;"	d
+CMD_SET_HW_DESCRIPTION	.\pkttypes.h	200;"	d
+CMD_SET_MAC	.\pkttypes.h	204;"	d
+CMD_SET_NTP_MODE	.\pkttypes.h	212;"	d
+CMD_SET_PACK_TYPE	.\pkttypes.h	228;"	d
+CMD_SET_PORT_CFG	.\pkttypes.h	219;"	d
+CMD_SET_PORT_MATRIX_CFG	.\pkttypes.h	234;"	d
+CMD_SET_PORT_SDH_MATRIX_CFG	.\pkttypes.h	232;"	d
+CMD_SET_SERVER_IP	.\pkttypes.h	206;"	d
+CMD_SET_SYS_TIME	.\pkttypes.h	210;"	d
+CMD_START_PFM_TEST	.\pkttypes.h	256;"	d
+CMD_START_PRBS	.\pkttypes.h	244;"	d
+CMD_STOP_PFM_TEST	.\pkttypes.h	258;"	d
+CMD_STOP_PRBS	.\pkttypes.h	245;"	d
+CMD_SWDBUS_ADD_PRODUCER	.\pkttypes.h	267;"	d
+CMD_SWDBUS_DEL_PRODUCER	.\pkttypes.h	268;"	d
+CMD_SWDBUS_KEEPALIVE	.\pkttypes.h	270;"	d
+CMD_SWDBUS_REGISTER	.\pkttypes.h	265;"	d
+CMD_SWDBUS_UNREGISTER	.\pkttypes.h	266;"	d
+CMD_SWDBUS_UPDATE_FILTER	.\pkttypes.h	269;"	d
+CMD_SYS_FIRMWARE_UPGRADE	.\pkttypes.h	248;"	d
+CMD_SYS_REBOOT	.\pkttypes.h	247;"	d
+CMD_SYS_START	.\pkttypes.h	249;"	d
+CMD_SYS_STOP	.\pkttypes.h	250;"	d
+CMD_UPLOAD_CH_CFGFILE	.\pkttypes.h	224;"	d
+CMD_UPLOAD_MATRIX_CFGFILE	.\pkttypes.h	236;"	d
+CMD_UPLOAD_PORT_CFGFILE	.\pkttypes.h	222;"	d
+CMD_WWW_CQ_CDRDATA	.\pkttypes.h	289;"	d
+CMD_WWW_CQ_NO_RAWDATA	.\pkttypes.h	292;"	d
+CMD_WWW_CQ_RAWDATA	.\pkttypes.h	291;"	d
+CMD_WWW_CQ_RAW_QUERY	.\pkttypes.h	290;"	d
+CMD_WWW_CQ_START	.\pkttypes.h	287;"	d
+CMD_WWW_CQ_STOP	.\pkttypes.h	288;"	d
+CMD_WWW_CT_CDRDATA	.\pkttypes.h	284;"	d
+CMD_WWW_CT_RAWDATA	.\pkttypes.h	286;"	d
+CMD_WWW_CT_RAW_QUERY	.\pkttypes.h	285;"	d
+CMD_WWW_CT_START	.\pkttypes.h	282;"	d
+CMD_WWW_CT_STOP	.\pkttypes.h	283;"	d
+CMD_WWW_KEEPALIVE	.\pkttypes.h	281;"	d
+CODING_16	.\coding.h	29;"	d
+CODING_24	.\coding.h	45;"	d
+CODING_32	.\coding.h	63;"	d
+CODING_64	.\coding.h	83;"	d
+CODING_8	.\coding.h	14;"	d
+CODING_OCTSTRING	.\coding.h	112;"	d
+CODING_STRING	.\coding.h	141;"	d
+CSSOCK_BLOCK_MODE	.\cssockdef.h	18;"	d
+CSSOCK_CONN_CB	.\cssockdef.h	/^typedef void (*CSSOCK_CONN_CB)(void *arg,$/;"	t
+CSSOCK_CUSTOMIZED_PKTSYNC	.\cssockdef.h	16;"	d
+CSSOCK_DISC_CB	.\cssockdef.h	/^typedef void (*CSSOCK_DISC_CB)(void *arg,$/;"	t
+CSSOCK_NO_HEARTBEAT	.\cssockdef.h	17;"	d
+CSSOCK_PAYLOAD_ONLY	.\cssockdef.h	15;"	d
+CSSOCK_RXALIGN_BUFSZ	.\cssockdef.h	12;"	d
+CSSOCK_STAT_CB	.\cssockdef.h	/^typedef void (*CSSOCK_STAT_CB)(char *lip, int lport, char *rip, int rport,$/;"	t
+CSSOCK_TXTMPBUF_SIZE	.\cssockdef.h	13;"	d
+DATATYPE_BYTE1	.\filter.h	/^	DATATYPE_BYTE1 = 1,$/;"	e	enum:__anon1
+DATATYPE_BYTE2	.\filter.h	/^	DATATYPE_BYTE2,$/;"	e	enum:__anon1
+DATATYPE_BYTE4	.\filter.h	/^	DATATYPE_BYTE4,$/;"	e	enum:__anon1
+DATATYPE_BYTE8	.\filter.h	/^	DATATYPE_BYTE8,$/;"	e	enum:__anon1
+DATATYPE_CHAR_STRING	.\filter.h	/^	DATATYPE_CHAR_STRING,$/;"	e	enum:__anon1
+DATATYPE_OCTET_STRING	.\filter.h	/^	DATATYPE_OCTET_STRING,$/;"	e	enum:__anon1
+DATATYPE_SET	.\filter.h	/^	DATATYPE_SET,$/;"	e	enum:__anon1
+DECLARE_LOGHANDLE	.\aplog.h	698;"	d
+DECODE_16	.\coding.h	36;"	d
+DECODE_24	.\coding.h	53;"	d
+DECODE_32	.\coding.h	72;"	d
+DECODE_64	.\coding.h	96;"	d
+DECODE_8	.\coding.h	20;"	d
+DECODE_OCTSTRING	.\coding.h	199;"	d
+DECODE_STRING	.\coding.h	198;"	d
+DEF_CDECL_FUNPOINT	.\os.h	90;"	d
+DEF_CDECL_FUNPOINT	.\os.h	92;"	d
+DEKHash	.\hash.h	/^static __inline unsigned int DEKHash(char* str, unsigned int len)$/;"	f
+DEKHashUL	.\hash.h	/^static __inline unsigned long DEKHashUL(unsigned long val, unsigned int bits)$/;"	f
+DELTA_EPOCH_IN_MICROSECS	.\misc.h	66;"	d
+DELTA_EPOCH_IN_MICROSECS	.\misc.h	68;"	d
+DJBHash	.\hash.h	/^static __inline unsigned int DJBHash(char* str, unsigned int len)$/;"	f
+DJBHashUL	.\hash.h	/^static __inline unsigned long DJBHashUL(unsigned long val, unsigned int bits)$/;"	f
+DLL_APP	.\adapter.h	15;"	d
+DLL_APP	.\adapter.h	17;"	d
+DLL_APP	.\adapter.h	20;"	d
+DLL_APP	.\adapter_cs.h	47;"	d
+DLL_APP	.\adapter_cs.h	49;"	d
+DLL_APP	.\adapter_cs.h	52;"	d
+DLL_APP	.\adapter_ss.h	31;"	d
+DLL_APP	.\adapter_ss.h	33;"	d
+DLL_APP	.\adapter_ss.h	36;"	d
+DLL_APP	.\apfrm.h	15;"	d
+DLL_APP	.\apfrm.h	17;"	d
+DLL_APP	.\apfrm.h	20;"	d
+DLL_APP	.\aplog.h	17;"	d
+DLL_APP	.\aplog.h	19;"	d
+DLL_APP	.\aplog.h	22;"	d
+DLL_APP	.\cconfig.h	18;"	d
+DLL_APP	.\cconfig.h	20;"	d
+DLL_APP	.\cconfig.h	23;"	d
+DLL_APP	.\cthread.h	17;"	d
+DLL_APP	.\cthread.h	19;"	d
+DLL_APP	.\cthread.h	22;"	d
+DLL_APP	.\filter.h	15;"	d
+DLL_APP	.\filter.h	17;"	d
+DLL_APP	.\filter.h	20;"	d
+DLL_APP	.\hashtbl.h	15;"	d
+DLL_APP	.\hashtbl.h	17;"	d
+DLL_APP	.\hashtbl.h	20;"	d
+DLL_APP	.\misc.h	15;"	d
+DLL_APP	.\misc.h	17;"	d
+DLL_APP	.\misc.h	20;"	d
+DLL_APP	.\mutex.h	15;"	d
+DLL_APP	.\mutex.h	17;"	d
+DLL_APP	.\mutex.h	20;"	d
+DLL_APP	.\pkt.h	27;"	d
+DLL_APP	.\pkt.h	29;"	d
+DLL_APP	.\pkt.h	32;"	d
+DLL_APP	.\refcnt.h	15;"	d
+DLL_APP	.\refcnt.h	17;"	d
+DLL_APP	.\refcnt.h	20;"	d
+DLL_APP	.\swdbus.h	15;"	d
+DLL_APP	.\swdbus.h	17;"	d
+DLL_APP	.\swdbus.h	20;"	d
+DLL_APP	.\timermgr.h	15;"	d
+DLL_APP	.\timermgr.h	17;"	d
+DLL_APP	.\timermgr.h	20;"	d
+DLL_EXP_API	.\os.h	49;"	d
+DLL_EXP_API	.\os.h	56;"	d
+DLL_EXP_API	.\os.h	59;"	d
+DLL_EXP_API	.\os.h	61;"	d
+DWORD	.\os.h	/^typedef unsigned int    DWORD;$/;"	t
+ELFHash	.\hash.h	/^static __inline unsigned int ELFHash(char* str, unsigned int len)$/;"	f
+ELFHashUL	.\hash.h	/^static __inline unsigned long ELFHashUL(unsigned long val, unsigned int bits)$/;"	f
+FALSE	.\os.h	154;"	d
+FILENAME_SEPERATOR	.\os.h	144;"	d
+FILENAME_SEPERATOR	.\os.h	146;"	d
+FILTER	.\filter.h	/^typedef struct FILTER {$/;"	s
+FILTER_OPTION_ALERT_TIME	.\filter_option.h	/^	FILTER_OPTION_ALERT_TIME,$/;"	e	enum:filter_option
+FILTER_OPTION_ASSIGN_END_TIME	.\filter_option.h	/^	FILTER_OPTION_ASSIGN_END_TIME,$/;"	e	enum:filter_option
+FILTER_OPTION_ASSIGN_FAILURE_CAUSE	.\filter_option.h	/^	FILTER_OPTION_ASSIGN_FAILURE_CAUSE,$/;"	e	enum:filter_option
+FILTER_OPTION_ASSIGN_TIME	.\filter_option.h	/^	FILTER_OPTION_ASSIGN_TIME,$/;"	e	enum:filter_option
+FILTER_OPTION_AUC_REQ_TIME	.\filter_option.h	/^	FILTER_OPTION_AUC_REQ_TIME,$/;"	e	enum:filter_option
+FILTER_OPTION_AUC_RESP_TIME	.\filter_option.h	/^	FILTER_OPTION_AUC_RESP_TIME,$/;"	e	enum:filter_option
+FILTER_OPTION_BASE_CDRID	.\filter_option.h	/^	FILTER_OPTION_BASE_CDRID,$/;"	e	enum:filter_option
+FILTER_OPTION_BSCIP	.\filter_option.h	/^	FILTER_OPTION_BSCIP,$/;"	e	enum:filter_option
+FILTER_OPTION_CALLED	.\filter_option.h	/^	FILTER_OPTION_CALLED,$/;"	e	enum:filter_option
+FILTER_OPTION_CALLED_PARTY_NUMBER	.\filter_option.h	/^	FILTER_OPTION_CALLED_PARTY_NUMBER,$/;"	e	enum:filter_option
+FILTER_OPTION_CALLER	.\filter_option.h	/^	FILTER_OPTION_CALLER,$/;"	e	enum:filter_option
+FILTER_OPTION_CALLING_PARTY_NUMBER	.\filter_option.h	/^	FILTER_OPTION_CALLING_PARTY_NUMBER,$/;"	e	enum:filter_option
+FILTER_OPTION_CC_REL_CAUSE	.\filter_option.h	/^	FILTER_OPTION_CC_REL_CAUSE,$/;"	e	enum:filter_option
+FILTER_OPTION_CC_REL_TIME	.\filter_option.h	/^	FILTER_OPTION_CC_REL_TIME,$/;"	e	enum:filter_option
+FILTER_OPTION_CC_RLC_TIME	.\filter_option.h	/^	FILTER_OPTION_CC_RLC_TIME,$/;"	e	enum:filter_option
+FILTER_OPTION_CC_TIME	.\filter_option.h	/^	FILTER_OPTION_CC_TIME,$/;"	e	enum:filter_option
+FILTER_OPTION_CDRID	.\filter_option.h	/^	FILTER_OPTION_CDRID,$/;"	e	enum:filter_option
+FILTER_OPTION_CDRRESULT	.\filter_option.h	/^	FILTER_OPTION_CDRRESULT,$/;"	e	enum:filter_option
+FILTER_OPTION_CDRTYPE	.\filter_option.h	/^	FILTER_OPTION_CDRTYPE,$/;"	e	enum:filter_option
+FILTER_OPTION_CHANNEL	.\filter_option.h	/^	FILTER_OPTION_CHANNEL,$/;"	e	enum:filter_option
+FILTER_OPTION_CI	.\filter_option.h	/^	FILTER_OPTION_CI,$/;"	e	enum:filter_option
+FILTER_OPTION_CIP_CMD_TIME	.\filter_option.h	/^	FILTER_OPTION_CIP_CMD_TIME,$/;"	e	enum:filter_option
+FILTER_OPTION_CIP_END_TIME	.\filter_option.h	/^	FILTER_OPTION_CIP_END_TIME,$/;"	e	enum:filter_option
+FILTER_OPTION_CIP_REJ_CAUSE	.\filter_option.h	/^	FILTER_OPTION_CIP_REJ_CAUSE,$/;"	e	enum:filter_option
+FILTER_OPTION_CLEAR_CAUSE	.\filter_option.h	/^	FILTER_OPTION_CLEAR_CAUSE,$/;"	e	enum:filter_option
+FILTER_OPTION_CLEAR_CMD_TIME	.\filter_option.h	/^	FILTER_OPTION_CLEAR_CMD_TIME,$/;"	e	enum:filter_option
+FILTER_OPTION_CLEAR_REQ_TIME	.\filter_option.h	/^	FILTER_OPTION_CLEAR_REQ_TIME,$/;"	e	enum:filter_option
+FILTER_OPTION_CM_REJ_CAUSE	.\filter_option.h	/^	FILTER_OPTION_CM_REJ_CAUSE,$/;"	e	enum:filter_option
+FILTER_OPTION_CONNECTED_NUMBER	.\filter_option.h	/^	FILTER_OPTION_CONNECTED_NUMBER,$/;"	e	enum:filter_option
+FILTER_OPTION_CONNECT_TIME	.\filter_option.h	/^	FILTER_OPTION_CONNECT_TIME,$/;"	e	enum:filter_option
+FILTER_OPTION_CP_CAUSE	.\filter_option.h	/^	FILTER_OPTION_CP_CAUSE,$/;"	e	enum:filter_option
+FILTER_OPTION_CREF_CAUSE	.\filter_option.h	/^	FILTER_OPTION_CREF_CAUSE,$/;"	e	enum:filter_option
+FILTER_OPTION_DEVICE	.\filter_option.h	/^	FILTER_OPTION_DEVICE,$/;"	e	enum:filter_option
+FILTER_OPTION_DGT	.\filter_option.h	/^	FILTER_OPTION_DGT,$/;"	e	enum:filter_option
+FILTER_OPTION_DISCONNECT_CAUSE	.\filter_option.h	/^	FILTER_OPTION_DISCONNECT_CAUSE,$/;"	e	enum:filter_option
+FILTER_OPTION_DISCONNECT_TIME	.\filter_option.h	/^	FILTER_OPTION_DISCONNECT_TIME,$/;"	e	enum:filter_option
+FILTER_OPTION_DPC	.\filter_option.h	/^	FILTER_OPTION_DPC,$/;"	e	enum:filter_option
+FILTER_OPTION_DST_IP_ADDR	.\filter_option.h	/^	FILTER_OPTION_DST_IP_ADDR,$/;"	e	enum:filter_option
+FILTER_OPTION_HLR	.\filter_option.h	/^	FILTER_OPTION_HLR,$/;"	e	enum:filter_option
+FILTER_OPTION_HO_CAUSE	.\filter_option.h	/^	FILTER_OPTION_HO_CAUSE,$/;"	e	enum:filter_option
+FILTER_OPTION_HO_FAILURE_CAUSE	.\filter_option.h	/^	FILTER_OPTION_HO_FAILURE_CAUSE,$/;"	e	enum:filter_option
+FILTER_OPTION_IDENTITY_REQ_TIME	.\filter_option.h	/^	FILTER_OPTION_IDENTITY_REQ_TIME,$/;"	e	enum:filter_option
+FILTER_OPTION_IDENTITY_RESP_TIME	.\filter_option.h	/^	FILTER_OPTION_IDENTITY_RESP_TIME,$/;"	e	enum:filter_option
+FILTER_OPTION_IMEI	.\filter_option.h	/^	FILTER_OPTION_IMEI,$/;"	e	enum:filter_option
+FILTER_OPTION_IMSI	.\filter_option.h	/^	FILTER_OPTION_IMSI,$/;"	e	enum:filter_option
+FILTER_OPTION_IMSI_DETACH_TIME	.\filter_option.h	/^	FILTER_OPTION_IMSI_DETACH_TIME,$/;"	e	enum:filter_option
+FILTER_OPTION_INVALID	.\filter_option.h	/^	FILTER_OPTION_INVALID = 0,$/;"	e	enum:filter_option
+FILTER_OPTION_LAC	.\filter_option.h	/^	FILTER_OPTION_LAC,$/;"	e	enum:filter_option
+FILTER_OPTION_LU_REJ_CAUSE	.\filter_option.h	/^	FILTER_OPTION_LU_REJ_CAUSE,$/;"	e	enum:filter_option
+FILTER_OPTION_METHOD	.\filter_option.h	/^	FILTER_OPTION_METHOD,$/;"	e	enum:filter_option
+FILTER_OPTION_MGW	.\filter_option.h	/^	FILTER_OPTION_MGW,$/;"	e	enum:filter_option
+FILTER_OPTION_MMS_MESSAGE_ID	.\filter_option.h	/^	FILTER_OPTION_MMS_MESSAGE_ID,$/;"	e	enum:filter_option
+FILTER_OPTION_MMS_MESSAGE_TYPE	.\filter_option.h	/^	FILTER_OPTION_MMS_MESSAGE_TYPE,$/;"	e	enum:filter_option
+FILTER_OPTION_MSC	.\filter_option.h	/^	FILTER_OPTION_MSC,$/;"	e	enum:filter_option
+FILTER_OPTION_MSCSERVER	.\filter_option.h	/^	FILTER_OPTION_MSCSERVER,$/;"	e	enum:filter_option
+FILTER_OPTION_MSISDN	.\filter_option.h	/^	FILTER_OPTION_MSISDN,$/;"	e	enum:filter_option
+FILTER_OPTION_MTP_SIO	.\filter_option.h	/^	FILTER_OPTION_MTP_SIO,$/;"	e	enum:filter_option
+FILTER_OPTION_NEWTMSI	.\filter_option.h	/^	FILTER_OPTION_NEWTMSI,$/;"	e	enum:filter_option
+FILTER_OPTION_NULL	.\filter_option.h	/^	FILTER_OPTION_NULL$/;"	e	enum:filter_option
+FILTER_OPTION_OGT	.\filter_option.h	/^	FILTER_OPTION_OGT,$/;"	e	enum:filter_option
+FILTER_OPTION_OPC	.\filter_option.h	/^	FILTER_OPTION_OPC,$/;"	e	enum:filter_option
+FILTER_OPTION_OPCODE	.\filter_option.h	/^	FILTER_OPTION_OPCODE,$/;"	e	enum:filter_option
+FILTER_OPTION_OPTYPE	.\filter_option.h	/^	FILTER_OPTION_OPTYPE,$/;"	e	enum:filter_option
+FILTER_OPTION_PAGING_1_TIME	.\filter_option.h	/^	FILTER_OPTION_PAGING_1_TIME,$/;"	e	enum:filter_option
+FILTER_OPTION_PAGING_2_TIME	.\filter_option.h	/^	FILTER_OPTION_PAGING_2_TIME,$/;"	e	enum:filter_option
+FILTER_OPTION_PAGING_3_TIME	.\filter_option.h	/^	FILTER_OPTION_PAGING_3_TIME,$/;"	e	enum:filter_option
+FILTER_OPTION_PAGING_4_TIME	.\filter_option.h	/^	FILTER_OPTION_PAGING_4_TIME,$/;"	e	enum:filter_option
+FILTER_OPTION_PCMTS	.\filter_option.h	/^	FILTER_OPTION_PCMTS,$/;"	e	enum:filter_option
+FILTER_OPTION_PEER_NUMBER	.\filter_option.h	/^	FILTER_OPTION_PEER_NUMBER,$/;"	e	enum:filter_option
+FILTER_OPTION_PROTOCOL	.\filter_option.h	/^	FILTER_OPTION_PROTOCOL,$/;"	e	enum:filter_option
+FILTER_OPTION_RAC	.\filter_option.h	/^	FILTER_OPTION_RAC,$/;"	e	enum:filter_option
+FILTER_OPTION_REDIRECTING_NUMBER	.\filter_option.h	/^	FILTER_OPTION_REDIRECTING_NUMBER,$/;"	e	enum:filter_option
+FILTER_OPTION_RELEASE_REASON	.\filter_option.h	/^	FILTER_OPTION_RELEASE_REASON,$/;"	e	enum:filter_option
+FILTER_OPTION_REPORT_TS	.\filter_option.h	/^	FILTER_OPTION_REPORT_TS,$/;"	e	enum:filter_option
+FILTER_OPTION_RESPONSE_CODE	.\filter_option.h	/^	FILTER_OPTION_RESPONSE_CODE,$/;"	e	enum:filter_option
+FILTER_OPTION_RNC	.\filter_option.h	/^	FILTER_OPTION_RNC,$/;"	e	enum:filter_option
+FILTER_OPTION_ROAMING_NUMBER	.\filter_option.h	/^	FILTER_OPTION_ROAMING_NUMBER,$/;"	e	enum:filter_option
+FILTER_OPTION_RPACK_TIME	.\filter_option.h	/^	FILTER_OPTION_RPACK_TIME,$/;"	e	enum:filter_option
+FILTER_OPTION_RPDATA_TIME	.\filter_option.h	/^	FILTER_OPTION_RPDATA_TIME,$/;"	e	enum:filter_option
+FILTER_OPTION_RP_CAUSE	.\filter_option.h	/^	FILTER_OPTION_RP_CAUSE,$/;"	e	enum:filter_option
+FILTER_OPTION_RR_CAUSE	.\filter_option.h	/^	FILTER_OPTION_RR_CAUSE,$/;"	e	enum:filter_option
+FILTER_OPTION_SAC	.\filter_option.h	/^	FILTER_OPTION_SAC,$/;"	e	enum:filter_option
+FILTER_OPTION_SCCP_DPC	.\filter_option.h	/^	FILTER_OPTION_SCCP_DPC,$/;"	e	enum:filter_option
+FILTER_OPTION_SCCP_OPC	.\filter_option.h	/^	FILTER_OPTION_SCCP_OPC,$/;"	e	enum:filter_option
+FILTER_OPTION_SCCP_REL_TIME	.\filter_option.h	/^	FILTER_OPTION_SCCP_REL_TIME,$/;"	e	enum:filter_option
+FILTER_OPTION_SCCP_RLC_TIME	.\filter_option.h	/^	FILTER_OPTION_SCCP_RLC_TIME,$/;"	e	enum:filter_option
+FILTER_OPTION_SERVICE_KEY	.\filter_option.h	/^	FILTER_OPTION_SERVICE_KEY,$/;"	e	enum:filter_option
+FILTER_OPTION_SETUP_TIME	.\filter_option.h	/^	FILTER_OPTION_SETUP_TIME,$/;"	e	enum:filter_option
+FILTER_OPTION_SGSNIP	.\filter_option.h	/^	FILTER_OPTION_SGSNIP,$/;"	e	enum:filter_option
+FILTER_OPTION_SMSC	.\filter_option.h	/^	FILTER_OPTION_SMSC,$/;"	e	enum:filter_option
+FILTER_OPTION_SMTYPE	.\filter_option.h	/^	FILTER_OPTION_SMTYPE,$/;"	e	enum:filter_option
+FILTER_OPTION_SM_CODING_SCHEME	.\filter_option.h	/^	FILTER_OPTION_SM_CODING_SCHEME,$/;"	e	enum:filter_option
+FILTER_OPTION_SRC_IP_ADDR	.\filter_option.h	/^	FILTER_OPTION_SRC_IP_ADDR,$/;"	e	enum:filter_option
+FILTER_OPTION_SSCODE	.\filter_option.h	/^	FILTER_OPTION_SSCODE,$/;"	e	enum:filter_option
+FILTER_OPTION_SUBTYPE	.\filter_option.h	/^	FILTER_OPTION_SUBTYPE,$/;"	e	enum:filter_option
+FILTER_OPTION_SVRID	.\filter_option.h	/^	FILTER_OPTION_SVRID,$/;"	e	enum:filter_option
+FILTER_OPTION_THIRD_NUMBER	.\filter_option.h	/^	FILTER_OPTION_THIRD_NUMBER,$/;"	e	enum:filter_option
+FILTER_OPTION_TMSI	.\filter_option.h	/^	FILTER_OPTION_TMSI,$/;"	e	enum:filter_option
+FILTER_OPTION_TYPE	.\filter_option.h	/^	FILTER_OPTION_TYPE,$/;"	e	enum:filter_option
+FILTER_OPTION_UE_ADDRESS	.\filter_option.h	/^	FILTER_OPTION_UE_ADDRESS,$/;"	e	enum:filter_option
+FILTER_OPTION_UE_PORT	.\filter_option.h	/^	FILTER_OPTION_UE_PORT,$/;"	e	enum:filter_option
+FILTER_OPTION_VLR	.\filter_option.h	/^	FILTER_OPTION_VLR,$/;"	e	enum:filter_option
+FILTER_OPTION_WAP_FAILURE_CAUSE	.\filter_option.h	/^	FILTER_OPTION_WAP_FAILURE_CAUSE,$/;"	e	enum:filter_option
+FNVHash	.\hash.h	/^static __inline unsigned int FNVHash(char* str, unsigned int len)$/;"	f
+FNVHashUL	.\hash.h	/^static __inline unsigned long FNVHashUL(unsigned long val, unsigned int bits)$/;"	f
+FSEEK	.\os.h	204;"	d
+FSEEK	.\os.h	207;"	d
+FTELL	.\os.h	203;"	d
+FTELL	.\os.h	206;"	d
+GOLDEN_RATIO_PRIME	.\hash.h	27;"	d
+GOLDEN_RATIO_PRIME	.\hash.h	30;"	d
+GetAllocCnt	.\MemAlloc_T.h	/^	int GetAllocCnt()$/;"	f	class:MemAlloc_T
+GetNoAllocCnt	.\MemAlloc_T.h	/^	int GetNoAllocCnt()$/;"	f	class:MemAlloc_T
+GetNodeSum	.\MemAlloc_T.h	/^	int GetNodeSum()$/;"	f	class:MemAlloc_T
+HigherBits	.\hash.h	/^static __inline unsigned long HigherBits(unsigned long val, unsigned int bits)$/;"	f
+INT_MAX	.\os.h	40;"	d
+INVALID_DEVID	.\os.h	187;"	d
+INVALID_HANDLE_VALUE	.\os.h	181;"	d
+INVALID_PCM	.\os.h	188;"	d
+INVALID_SOCKET	.\os.h	170;"	d
+INVALID_SUBTAG	.\os.h	186;"	d
+INVALID_TAG	.\os.h	185;"	d
+INVALID_TS	.\os.h	189;"	d
+IPC_CREAT	.\os.h	131;"	d
+IPC_EXCL	.\os.h	132;"	d
+IPC_NOWAIT	.\os.h	133;"	d
+IncreaseMem	.\MemAlloc_T.h	/^	int IncreaseMem(int nCount)$/;"	f	class:MemAlloc_T
+InitBaseMemBlock	.\MemAlloc_T.h	/^	int InitBaseMemBlock()$/;"	f	class:MemAlloc_T
+JSHash	.\hash.h	/^static __inline unsigned int JSHash(char* str, unsigned int len)$/;"	f
+JSHashUL	.\hash.h	/^static __inline unsigned long JSHashUL(unsigned long val, unsigned int bits)$/;"	f
+LCH_OS_HEADER	.\os.h	12;"	d
+LGWR	.\aplog.h	147;"	d
+LGWR	.\aplog.h	81;"	d
+LGWR1	.\aplog.h	208;"	d
+LGWR2	.\aplog.h	211;"	d
+LGWR3	.\aplog.h	214;"	d
+LGWR4	.\aplog.h	217;"	d
+LGWR5	.\aplog.h	220;"	d
+LGWR6	.\aplog.h	223;"	d
+LGWR7	.\aplog.h	226;"	d
+LGWRALERT	.\aplog.h	155;"	d
+LGWRALERT	.\aplog.h	90;"	d
+LGWRALERT1	.\aplog.h	273;"	d
+LGWRALERT2	.\aplog.h	279;"	d
+LGWRALERT3	.\aplog.h	285;"	d
+LGWRALERT4	.\aplog.h	291;"	d
+LGWRALERT5	.\aplog.h	297;"	d
+LGWRALERT6	.\aplog.h	303;"	d
+LGWRALERT7	.\aplog.h	309;"	d
+LGWRCLOSE	.\aplog.h	74;"	d
+LGWRCRITICAL	.\aplog.h	161;"	d
+LGWRCRITICAL	.\aplog.h	96;"	d
+LGWRCRITICAL1	.\aplog.h	316;"	d
+LGWRCRITICAL2	.\aplog.h	322;"	d
+LGWRCRITICAL3	.\aplog.h	328;"	d
+LGWRCRITICAL4	.\aplog.h	334;"	d
+LGWRCRITICAL5	.\aplog.h	340;"	d
+LGWRCRITICAL6	.\aplog.h	346;"	d
+LGWRCRITICAL7	.\aplog.h	352;"	d
+LGWRDEBUG	.\aplog.h	131;"	d
+LGWRDEBUG	.\aplog.h	138;"	d
+LGWRDEBUG	.\aplog.h	196;"	d
+LGWRDEBUG	.\aplog.h	203;"	d
+LGWRDEBUG1	.\aplog.h	542;"	d
+LGWRDEBUG1	.\aplog.h	585;"	d
+LGWRDEBUG2	.\aplog.h	548;"	d
+LGWRDEBUG2	.\aplog.h	586;"	d
+LGWRDEBUG3	.\aplog.h	554;"	d
+LGWRDEBUG3	.\aplog.h	587;"	d
+LGWRDEBUG4	.\aplog.h	560;"	d
+LGWRDEBUG4	.\aplog.h	588;"	d
+LGWRDEBUG5	.\aplog.h	566;"	d
+LGWRDEBUG5	.\aplog.h	589;"	d
+LGWRDEBUG6	.\aplog.h	572;"	d
+LGWRDEBUG6	.\aplog.h	590;"	d
+LGWRDEBUG7	.\aplog.h	578;"	d
+LGWRDEBUG7	.\aplog.h	591;"	d
+LGWREMERGENCY	.\aplog.h	149;"	d
+LGWREMERGENCY	.\aplog.h	84;"	d
+LGWREMERGENCY1	.\aplog.h	230;"	d
+LGWREMERGENCY2	.\aplog.h	236;"	d
+LGWREMERGENCY3	.\aplog.h	242;"	d
+LGWREMERGENCY4	.\aplog.h	248;"	d
+LGWREMERGENCY5	.\aplog.h	254;"	d
+LGWREMERGENCY6	.\aplog.h	260;"	d
+LGWREMERGENCY7	.\aplog.h	266;"	d
+LGWRERROR	.\aplog.h	102;"	d
+LGWRERROR	.\aplog.h	167;"	d
+LGWRERROR1	.\aplog.h	359;"	d
+LGWRERROR2	.\aplog.h	365;"	d
+LGWRERROR3	.\aplog.h	371;"	d
+LGWRERROR4	.\aplog.h	377;"	d
+LGWRERROR5	.\aplog.h	383;"	d
+LGWRERROR6	.\aplog.h	389;"	d
+LGWRERROR7	.\aplog.h	395;"	d
+LGWRFLUSHNOW	.\aplog.h	32;"	d
+LGWRINFO	.\aplog.h	121;"	d
+LGWRINFO	.\aplog.h	128;"	d
+LGWRINFO	.\aplog.h	186;"	d
+LGWRINFO	.\aplog.h	193;"	d
+LGWRINFO1	.\aplog.h	489;"	d
+LGWRINFO1	.\aplog.h	532;"	d
+LGWRINFO2	.\aplog.h	495;"	d
+LGWRINFO2	.\aplog.h	533;"	d
+LGWRINFO3	.\aplog.h	501;"	d
+LGWRINFO3	.\aplog.h	534;"	d
+LGWRINFO4	.\aplog.h	507;"	d
+LGWRINFO4	.\aplog.h	535;"	d
+LGWRINFO5	.\aplog.h	513;"	d
+LGWRINFO5	.\aplog.h	536;"	d
+LGWRINFO6	.\aplog.h	519;"	d
+LGWRINFO6	.\aplog.h	537;"	d
+LGWRINFO7	.\aplog.h	525;"	d
+LGWRINFO7	.\aplog.h	538;"	d
+LGWRLEVELALERT	.\aplog.h	36;"	d
+LGWRLEVELCRITICAL	.\aplog.h	37;"	d
+LGWRLEVELDEBUG	.\aplog.h	42;"	d
+LGWRLEVELEMERGENCY	.\aplog.h	35;"	d
+LGWRLEVELERROR	.\aplog.h	38;"	d
+LGWRLEVELINFO	.\aplog.h	41;"	d
+LGWRLEVELNOLEVEL	.\aplog.h	34;"	d
+LGWRLEVELNOTICE	.\aplog.h	40;"	d
+LGWRLEVELS	.\aplog.h	43;"	d
+LGWRLEVELWARN	.\aplog.h	39;"	d
+LGWRNOTICE	.\aplog.h	114;"	d
+LGWRNOTICE	.\aplog.h	179;"	d
+LGWRNOTICE1	.\aplog.h	445;"	d
+LGWRNOTICE2	.\aplog.h	451;"	d
+LGWRNOTICE3	.\aplog.h	457;"	d
+LGWRNOTICE4	.\aplog.h	463;"	d
+LGWRNOTICE5	.\aplog.h	469;"	d
+LGWRNOTICE6	.\aplog.h	475;"	d
+LGWRNOTICE7	.\aplog.h	481;"	d
+LGWROPEN	.\aplog.h	73;"	d
+LGWRSTRALERT	.\aplog.h	46;"	d
+LGWRSTRCRITICAL	.\aplog.h	47;"	d
+LGWRSTRDEBUG	.\aplog.h	52;"	d
+LGWRSTREMERGENCY	.\aplog.h	45;"	d
+LGWRSTRERROR	.\aplog.h	48;"	d
+LGWRSTRINFO	.\aplog.h	51;"	d
+LGWRSTRNOTICE	.\aplog.h	50;"	d
+LGWRSTRWARN	.\aplog.h	49;"	d
+LGWRWARN	.\aplog.h	108;"	d
+LGWRWARN	.\aplog.h	173;"	d
+LGWRWARN1	.\aplog.h	402;"	d
+LGWRWARN2	.\aplog.h	408;"	d
+LGWRWARN3	.\aplog.h	414;"	d
+LGWRWARN4	.\aplog.h	420;"	d
+LGWRWARN5	.\aplog.h	426;"	d
+LGWRWARN6	.\aplog.h	432;"	d
+LGWRWARN7	.\aplog.h	438;"	d
+LIKELY	.\os.h	223;"	d
+LIKELY	.\os.h	226;"	d
+LOG	.\aplog.h	607;"	d
+LOG	.\aplog.h	617;"	d
+LOG1	.\aplog.h	628;"	d
+LOG2	.\aplog.h	638;"	d
+LOG3	.\aplog.h	648;"	d
+LOG4	.\aplog.h	658;"	d
+LOG5	.\aplog.h	668;"	d
+LOG6	.\aplog.h	678;"	d
+LOG7	.\aplog.h	688;"	d
+LOGALERT	.\aplog.h	609;"	d
+LOGALERT	.\aplog.h	619;"	d
+LOGALERT1	.\aplog.h	630;"	d
+LOGALERT2	.\aplog.h	640;"	d
+LOGALERT3	.\aplog.h	650;"	d
+LOGALERT4	.\aplog.h	660;"	d
+LOGALERT5	.\aplog.h	670;"	d
+LOGALERT6	.\aplog.h	680;"	d
+LOGALERT7	.\aplog.h	690;"	d
+LOGCRITICAL	.\aplog.h	610;"	d
+LOGCRITICAL	.\aplog.h	620;"	d
+LOGCRITICAL1	.\aplog.h	631;"	d
+LOGCRITICAL2	.\aplog.h	641;"	d
+LOGCRITICAL3	.\aplog.h	651;"	d
+LOGCRITICAL4	.\aplog.h	661;"	d
+LOGCRITICAL5	.\aplog.h	671;"	d
+LOGCRITICAL6	.\aplog.h	681;"	d
+LOGCRITICAL7	.\aplog.h	691;"	d
+LOGDEBUG	.\aplog.h	615;"	d
+LOGDEBUG	.\aplog.h	625;"	d
+LOGDEBUG1	.\aplog.h	636;"	d
+LOGDEBUG2	.\aplog.h	646;"	d
+LOGDEBUG3	.\aplog.h	656;"	d
+LOGDEBUG4	.\aplog.h	666;"	d
+LOGDEBUG5	.\aplog.h	676;"	d
+LOGDEBUG6	.\aplog.h	686;"	d
+LOGDEBUG7	.\aplog.h	696;"	d
+LOGDEBUGDECL	.\aplog.h	601;"	d
+LOGDEBUGDECL	.\aplog.h	603;"	d
+LOGEMERGENCY	.\aplog.h	608;"	d
+LOGEMERGENCY	.\aplog.h	618;"	d
+LOGEMERGENCY1	.\aplog.h	629;"	d
+LOGEMERGENCY2	.\aplog.h	639;"	d
+LOGEMERGENCY3	.\aplog.h	649;"	d
+LOGEMERGENCY4	.\aplog.h	659;"	d
+LOGEMERGENCY5	.\aplog.h	669;"	d
+LOGEMERGENCY6	.\aplog.h	679;"	d
+LOGEMERGENCY7	.\aplog.h	689;"	d
+LOGERROR	.\aplog.h	611;"	d
+LOGERROR	.\aplog.h	621;"	d
+LOGERROR1	.\aplog.h	632;"	d
+LOGERROR2	.\aplog.h	642;"	d
+LOGERROR3	.\aplog.h	652;"	d
+LOGERROR4	.\aplog.h	662;"	d
+LOGERROR5	.\aplog.h	672;"	d
+LOGERROR6	.\aplog.h	682;"	d
+LOGERROR7	.\aplog.h	692;"	d
+LOGINFO	.\aplog.h	614;"	d
+LOGINFO	.\aplog.h	624;"	d
+LOGINFO1	.\aplog.h	635;"	d
+LOGINFO2	.\aplog.h	645;"	d
+LOGINFO3	.\aplog.h	655;"	d
+LOGINFO4	.\aplog.h	665;"	d
+LOGINFO5	.\aplog.h	675;"	d
+LOGINFO6	.\aplog.h	685;"	d
+LOGINFO7	.\aplog.h	695;"	d
+LOGINFODECL	.\aplog.h	595;"	d
+LOGINFODECL	.\aplog.h	597;"	d
+LOGLEVELTITLE	.\aplog.h	78;"	d
+LOGNOTICE	.\aplog.h	613;"	d
+LOGNOTICE	.\aplog.h	623;"	d
+LOGNOTICE1	.\aplog.h	634;"	d
+LOGNOTICE2	.\aplog.h	644;"	d
+LOGNOTICE3	.\aplog.h	654;"	d
+LOGNOTICE4	.\aplog.h	664;"	d
+LOGNOTICE5	.\aplog.h	674;"	d
+LOGNOTICE6	.\aplog.h	684;"	d
+LOGNOTICE7	.\aplog.h	694;"	d
+LOGWARN	.\aplog.h	612;"	d
+LOGWARN	.\aplog.h	622;"	d
+LOGWARN1	.\aplog.h	633;"	d
+LOGWARN2	.\aplog.h	643;"	d
+LOGWARN3	.\aplog.h	653;"	d
+LOGWARN4	.\aplog.h	663;"	d
+LOGWARN5	.\aplog.h	673;"	d
+LOGWARN6	.\aplog.h	683;"	d
+LOGWARN7	.\aplog.h	693;"	d
+LPCSTR	.\os.h	/^typedef unsigned char * LPCSTR;$/;"	t
+LPTHREAD_START_ROUTINE	.\os.h	/^typedef void * (*LPTHREAD_START_ROUTINE)(void *);$/;"	t
+LPVOID	.\os.h	/^typedef void *          LPVOID;$/;"	t
+LowerBits	.\hash.h	/^static __inline unsigned long LowerBits(unsigned long val, unsigned int bits)$/;"	f
+MAX_PATH	.\os.h	140;"	d
+MAX_SOCKET_PORT	.\os.h	178;"	d
+MEMALLOC_T_H_HEADER_INCLUDED_B7685972	.\MemAlloc_T.h	8;"	d
+MEM_ALLOC_MODE	.\MemAlloc_T.h	/^enum MEM_ALLOC_MODE$/;"	g
+MEM_ALLOC_MODE_ANYELSE	.\MemAlloc_T.h	/^	MEM_ALLOC_MODE_ANYELSE = 1000$/;"	e	enum:MEM_ALLOC_MODE
+MEM_ALLOC_MODE_BLOCKLIST	.\MemAlloc_T.h	/^	MEM_ALLOC_MODE_BLOCKLIST = 1,$/;"	e	enum:MEM_ALLOC_MODE
+MEM_ALLOC_MODE_NEWDEL	.\MemAlloc_T.h	/^	MEM_ALLOC_MODE_NEWDEL = 0,$/;"	e	enum:MEM_ALLOC_MODE
+MIN_SOCKET_PORT	.\os.h	177;"	d
+MemAlloc_T	.\MemAlloc_T.h	/^	MemAlloc_T(MEM_ALLOC_MODE nAllocMode = MEM_ALLOC_MODE_BLOCKLIST,$/;"	f	class:MemAlloc_T
+MemAlloc_T	.\MemAlloc_T.h	/^template <class Val_T> class MemAlloc_T$/;"	c
+MemNode_T	.\MemAlloc_T.h	/^	MemNode_T(Node_T *n = NULL)$/;"	f	class:MemNode_T
+MemNode_T	.\MemAlloc_T.h	/^class MemNode_T$/;"	c
+Mix	.\hash.h	/^static __inline unsigned long Mix(unsigned long val, unsigned int bits)$/;"	f
+N_	.\os.h	195;"	d
+N_	.\os.h	199;"	d
+Node_T	.\MemAlloc_T.h	/^	typedef MemNode_T<Val_T> Node_T;$/;"	t	class:MemAlloc_T
+Node_T	.\MemAlloc_T.h	/^	typedef MemNode_T<Val_T> Node_T;$/;"	t	class:MemNode_T
+OP_EQ	.\filter.h	/^	OP_EQ = 1,$/;"	e	enum:__anon2
+OP_GE	.\filter.h	/^	OP_GE,$/;"	e	enum:__anon2
+OP_GT	.\filter.h	/^	OP_GT,$/;"	e	enum:__anon2
+OP_IN	.\filter.h	/^	OP_IN,$/;"	e	enum:__anon2
+OP_LE	.\filter.h	/^	OP_LE,$/;"	e	enum:__anon2
+OP_LT	.\filter.h	/^	OP_LT,$/;"	e	enum:__anon2
+OP_MATCH	.\filter.h	/^	OP_MATCH,$/;"	e	enum:__anon2
+OP_NEQ	.\filter.h	/^	OP_NEQ,$/;"	e	enum:__anon2
+OP_OCTCMP	.\filter.h	/^	OP_OCTCMP,$/;"	e	enum:__anon2
+OP_OCTNCMP	.\filter.h	/^	OP_OCTNCMP,$/;"	e	enum:__anon2
+OP_STRCMP	.\filter.h	/^	OP_STRCMP,    \/* Precise comparision: compare both length and content. *\/$/;"	e	enum:__anon2
+OP_STRNCMP	.\filter.h	/^	OP_STRNCMP,$/;"	e	enum:__anon2
+OS_HP	.\os.h	28;"	d
+OS_LINUX	.\os.h	15;"	d
+OS_SUN	.\os.h	32;"	d
+OS_WINDOWS	.\os.h	19;"	d
+OS_WINDOWS_BC	.\os.h	21;"	d
+OS_WINDOWS_VC	.\os.h	23;"	d
+PJWHash	.\hash.h	/^static __inline unsigned int PJWHash(char* str, unsigned int len)$/;"	f
+PJWHashUL	.\hash.h	/^static __inline unsigned long PJWHashUL(unsigned long val, unsigned int bits)$/;"	f
+PKTPROTOCOL_ABIS	.\pkttypes.h	402;"	d
+PKTPROTOCOL_AUTO	.\pkttypes.h	401;"	d
+PKTPROTOCOL_GB	.\pkttypes.h	405;"	d
+PKTPROTOCOL_MOBIS	.\pkttypes.h	403;"	d
+PKTPROTOCOL_SS7	.\pkttypes.h	404;"	d
+PKTTYPE_CALLTRACE	.\pkttypes.h	84;"	d
+PKTTYPE_CDR	.\pkttypes.h	38;"	d
+PKTTYPE_CDRQUERY	.\pkttypes.h	88;"	d
+PKTTYPE_CDR_A11	.\pkttypes.h	53;"	d
+PKTTYPE_CDR_ABIS	.\pkttypes.h	40;"	d
+PKTTYPE_CDR_BICC	.\pkttypes.h	46;"	d
+PKTTYPE_CDR_BSSAP	.\pkttypes.h	41;"	d
+PKTTYPE_CDR_CAP	.\pkttypes.h	43;"	d
+PKTTYPE_CDR_CSFB	.\pkttypes.h	61;"	d
+PKTTYPE_CDR_DIAMETER	.\pkttypes.h	60;"	d
+PKTTYPE_CDR_DNS	.\pkttypes.h	72;"	d
+PKTTYPE_CDR_FTP	.\pkttypes.h	51;"	d
+PKTTYPE_CDR_GB	.\pkttypes.h	42;"	d
+PKTTYPE_CDR_GBCTRL	.\pkttypes.h	54;"	d
+PKTTYPE_CDR_GI	.\pkttypes.h	49;"	d
+PKTTYPE_CDR_GN	.\pkttypes.h	48;"	d
+PKTTYPE_CDR_H248	.\pkttypes.h	47;"	d
+PKTTYPE_CDR_HTTP	.\pkttypes.h	64;"	d
+PKTTYPE_CDR_ICMP	.\pkttypes.h	50;"	d
+PKTTYPE_CDR_IMAP	.\pkttypes.h	76;"	d
+PKTTYPE_CDR_IUCS	.\pkttypes.h	44;"	d
+PKTTYPE_CDR_IUPS	.\pkttypes.h	45;"	d
+PKTTYPE_CDR_IUPSCTRL	.\pkttypes.h	55;"	d
+PKTTYPE_CDR_MAP	.\pkttypes.h	39;"	d
+PKTTYPE_CDR_MM3	.\pkttypes.h	68;"	d
+PKTTYPE_CDR_MM4	.\pkttypes.h	69;"	d
+PKTTYPE_CDR_MM7	.\pkttypes.h	70;"	d
+PKTTYPE_CDR_MMS	.\pkttypes.h	67;"	d
+PKTTYPE_CDR_MMSMGR	.\pkttypes.h	71;"	d
+PKTTYPE_CDR_PARLAY	.\pkttypes.h	79;"	d
+PKTTYPE_CDR_PIM	.\pkttypes.h	80;"	d
+PKTTYPE_CDR_POP3	.\pkttypes.h	75;"	d
+PKTTYPE_CDR_QQ	.\pkttypes.h	73;"	d
+PKTTYPE_CDR_RADIUS	.\pkttypes.h	52;"	d
+PKTTYPE_CDR_RRC	.\pkttypes.h	56;"	d
+PKTTYPE_CDR_RTSP	.\pkttypes.h	77;"	d
+PKTTYPE_CDR_S1AP	.\pkttypes.h	59;"	d
+PKTTYPE_CDR_SGS	.\pkttypes.h	58;"	d
+PKTTYPE_CDR_SIP	.\pkttypes.h	78;"	d
+PKTTYPE_CDR_SMGP	.\pkttypes.h	82;"	d
+PKTTYPE_CDR_SMPP	.\pkttypes.h	81;"	d
+PKTTYPE_CDR_SMTP	.\pkttypes.h	74;"	d
+PKTTYPE_CDR_TCP	.\pkttypes.h	62;"	d
+PKTTYPE_CDR_UDP	.\pkttypes.h	63;"	d
+PKTTYPE_CDR_WAP	.\pkttypes.h	66;"	d
+PKTTYPE_CDR_WSP	.\pkttypes.h	65;"	d
+PKTTYPE_CDR_X2AP	.\pkttypes.h	57;"	d
+PKTTYPE_CMD	.\pkttypes.h	392;"	d
+PKTTYPE_CMDACK	.\pkttypes.h	397;"	d
+PKTTYPE_CMDNACK	.\pkttypes.h	398;"	d
+PKTTYPE_CMD_MAX	.\pkttypes.h	395;"	d
+PKTTYPE_CMD_MIN	.\pkttypes.h	394;"	d
+PKTTYPE_DATA	.\pkttypes.h	20;"	d
+PKTTYPE_DATA_ATM	.\pkttypes.h	24;"	d
+PKTTYPE_DATA_ETHERNET	.\pkttypes.h	25;"	d
+PKTTYPE_DATA_FRAMERELAY	.\pkttypes.h	26;"	d
+PKTTYPE_DATA_GTEL_UDP	.\pkttypes.h	31;"	d
+PKTTYPE_DATA_IF1	.\pkttypes.h	30;"	d
+PKTTYPE_DATA_LAPD	.\pkttypes.h	22;"	d
+PKTTYPE_DATA_LINUX_SLL	.\pkttypes.h	28;"	d
+PKTTYPE_DATA_MTP	.\pkttypes.h	21;"	d
+PKTTYPE_DATA_PPP	.\pkttypes.h	23;"	d
+PKTTYPE_DATA_RAW_IP	.\pkttypes.h	29;"	d
+PKTTYPE_DATA_TC	.\pkttypes.h	27;"	d
+PKTTYPE_DPI	.\pkttypes.h	370;"	d
+PKTTYPE_EVENT	.\pkttypes.h	94;"	d
+PKTTYPE_EVENT_A11	.\pkttypes.h	146;"	d
+PKTTYPE_EVENT_A11_CREATE	.\pkttypes.h	147;"	d
+PKTTYPE_EVENT_A11_RELEASE	.\pkttypes.h	149;"	d
+PKTTYPE_EVENT_A11_UPDATE	.\pkttypes.h	148;"	d
+PKTTYPE_EVENT_ABIS	.\pkttypes.h	96;"	d
+PKTTYPE_EVENT_ABIS_ACTIVATION_ASSIGNMENT	.\pkttypes.h	100;"	d
+PKTTYPE_EVENT_ABIS_HO_FAILURE	.\pkttypes.h	99;"	d
+PKTTYPE_EVENT_ABIS_HO_SUCCESS	.\pkttypes.h	98;"	d
+PKTTYPE_EVENT_ABIS_MR	.\pkttypes.h	97;"	d
+PKTTYPE_EVENT_ABIS_RESOURCE_INFORMATION	.\pkttypes.h	101;"	d
+PKTTYPE_EVENT_BICC	.\pkttypes.h	125;"	d
+PKTTYPE_EVENT_BICC_ACM	.\pkttypes.h	127;"	d
+PKTTYPE_EVENT_BICC_ANM	.\pkttypes.h	128;"	d
+PKTTYPE_EVENT_BICC_IAM	.\pkttypes.h	126;"	d
+PKTTYPE_EVENT_BICC_REL	.\pkttypes.h	129;"	d
+PKTTYPE_EVENT_BICC_RLC	.\pkttypes.h	130;"	d
+PKTTYPE_EVENT_BSSAP	.\pkttypes.h	102;"	d
+PKTTYPE_EVENT_BSSAP_ASSIGNMENT	.\pkttypes.h	109;"	d
+PKTTYPE_EVENT_BSSAP_GENERAL	.\pkttypes.h	112;"	d
+PKTTYPE_EVENT_BSSAP_HANDOVER	.\pkttypes.h	110;"	d
+PKTTYPE_EVENT_BSSAP_HI_FAILURE	.\pkttypes.h	108;"	d
+PKTTYPE_EVENT_BSSAP_HI_SUCCESS	.\pkttypes.h	107;"	d
+PKTTYPE_EVENT_BSSAP_HO_FAILURE	.\pkttypes.h	105;"	d
+PKTTYPE_EVENT_BSSAP_HO_REQUIRED_REJECT	.\pkttypes.h	106;"	d
+PKTTYPE_EVENT_BSSAP_INTER_BSC_HO	.\pkttypes.h	104;"	d
+PKTTYPE_EVENT_BSSAP_INTRA_BSC_HO	.\pkttypes.h	103;"	d
+PKTTYPE_EVENT_BSSAP_TERRESTRIAL_RESOURCE	.\pkttypes.h	111;"	d
+PKTTYPE_EVENT_CAP	.\pkttypes.h	116;"	d
+PKTTYPE_EVENT_DNS	.\pkttypes.h	179;"	d
+PKTTYPE_EVENT_DNS_TERMINATED	.\pkttypes.h	180;"	d
+PKTTYPE_EVENT_FTP	.\pkttypes.h	140;"	d
+PKTTYPE_EVENT_FTP_DATA_TERMINATED	.\pkttypes.h	141;"	d
+PKTTYPE_EVENT_GB	.\pkttypes.h	113;"	d
+PKTTYPE_EVENT_GB_CELL_RESELECT	.\pkttypes.h	114;"	d
+PKTTYPE_EVENT_GB_CRUX	.\pkttypes.h	115;"	d
+PKTTYPE_EVENT_GI	.\pkttypes.h	138;"	d
+PKTTYPE_EVENT_GN	.\pkttypes.h	132;"	d
+PKTTYPE_EVENT_GN_CP_CREATE	.\pkttypes.h	133;"	d
+PKTTYPE_EVENT_GN_CP_DELETE	.\pkttypes.h	135;"	d
+PKTTYPE_EVENT_GN_CP_UPDATE	.\pkttypes.h	134;"	d
+PKTTYPE_EVENT_GN_SESSION_TERMINATED	.\pkttypes.h	137;"	d
+PKTTYPE_EVENT_GN_SESSION_TIMER	.\pkttypes.h	136;"	d
+PKTTYPE_EVENT_H248	.\pkttypes.h	131;"	d
+PKTTYPE_EVENT_HTTP	.\pkttypes.h	161;"	d
+PKTTYPE_EVENT_HTTP_CELL_CHANGED	.\pkttypes.h	162;"	d
+PKTTYPE_EVENT_HTTP_TERMINATED	.\pkttypes.h	164;"	d
+PKTTYPE_EVENT_HTTP_TIMER	.\pkttypes.h	163;"	d
+PKTTYPE_EVENT_ICMP	.\pkttypes.h	139;"	d
+PKTTYPE_EVENT_IMAP	.\pkttypes.h	187;"	d
+PKTTYPE_EVENT_IUCS	.\pkttypes.h	117;"	d
+PKTTYPE_EVENT_IUCS_HI_FAILURE	.\pkttypes.h	123;"	d
+PKTTYPE_EVENT_IUCS_HI_SUCCESS	.\pkttypes.h	122;"	d
+PKTTYPE_EVENT_IUCS_HO_FAILURE	.\pkttypes.h	120;"	d
+PKTTYPE_EVENT_IUCS_HO_REQUIRED_REJECT	.\pkttypes.h	121;"	d
+PKTTYPE_EVENT_IUCS_INTER_BSC_HO	.\pkttypes.h	119;"	d
+PKTTYPE_EVENT_IUCS_INTRA_BSC_HO	.\pkttypes.h	118;"	d
+PKTTYPE_EVENT_IUPS	.\pkttypes.h	124;"	d
+PKTTYPE_EVENT_MAP	.\pkttypes.h	95;"	d
+PKTTYPE_EVENT_MM3	.\pkttypes.h	175;"	d
+PKTTYPE_EVENT_MM4	.\pkttypes.h	176;"	d
+PKTTYPE_EVENT_MM7	.\pkttypes.h	177;"	d
+PKTTYPE_EVENT_MMS	.\pkttypes.h	173;"	d
+PKTTYPE_EVENT_MMSMGR	.\pkttypes.h	178;"	d
+PKTTYPE_EVENT_MMS_TERMINATED	.\pkttypes.h	174;"	d
+PKTTYPE_EVENT_PARLAY	.\pkttypes.h	190;"	d
+PKTTYPE_EVENT_PIM	.\pkttypes.h	191;"	d
+PKTTYPE_EVENT_POP3	.\pkttypes.h	186;"	d
+PKTTYPE_EVENT_QQ	.\pkttypes.h	181;"	d
+PKTTYPE_EVENT_QQ_CELL_CHANGED	.\pkttypes.h	182;"	d
+PKTTYPE_EVENT_QQ_TERMINATED	.\pkttypes.h	184;"	d
+PKTTYPE_EVENT_QQ_TIMER	.\pkttypes.h	183;"	d
+PKTTYPE_EVENT_RADIUS	.\pkttypes.h	142;"	d
+PKTTYPE_EVENT_RADIUS_ALIVE	.\pkttypes.h	145;"	d
+PKTTYPE_EVENT_RADIUS_START	.\pkttypes.h	143;"	d
+PKTTYPE_EVENT_RADIUS_STOP	.\pkttypes.h	144;"	d
+PKTTYPE_EVENT_RRC	.\pkttypes.h	150;"	d
+PKTTYPE_EVENT_RRC_CELL_MR	.\pkttypes.h	151;"	d
+PKTTYPE_EVENT_RRC_UE_MR	.\pkttypes.h	152;"	d
+PKTTYPE_EVENT_RTSP	.\pkttypes.h	188;"	d
+PKTTYPE_EVENT_SIP	.\pkttypes.h	189;"	d
+PKTTYPE_EVENT_SMGP	.\pkttypes.h	193;"	d
+PKTTYPE_EVENT_SMPP	.\pkttypes.h	192;"	d
+PKTTYPE_EVENT_SMTP	.\pkttypes.h	185;"	d
+PKTTYPE_EVENT_TCP	.\pkttypes.h	153;"	d
+PKTTYPE_EVENT_TCP_CELL_CHANGED	.\pkttypes.h	154;"	d
+PKTTYPE_EVENT_TCP_TERMINATED	.\pkttypes.h	156;"	d
+PKTTYPE_EVENT_TCP_TIMER	.\pkttypes.h	155;"	d
+PKTTYPE_EVENT_UDP	.\pkttypes.h	157;"	d
+PKTTYPE_EVENT_UDP_CELL_CHANGED	.\pkttypes.h	158;"	d
+PKTTYPE_EVENT_UDP_TERMINATED	.\pkttypes.h	160;"	d
+PKTTYPE_EVENT_UDP_TIMER	.\pkttypes.h	159;"	d
+PKTTYPE_EVENT_WAP	.\pkttypes.h	169;"	d
+PKTTYPE_EVENT_WAP_CELL_CHANGED	.\pkttypes.h	170;"	d
+PKTTYPE_EVENT_WAP_TERMINATED	.\pkttypes.h	172;"	d
+PKTTYPE_EVENT_WAP_TIMER	.\pkttypes.h	171;"	d
+PKTTYPE_EVENT_WSP	.\pkttypes.h	165;"	d
+PKTTYPE_EVENT_WSP_CELL_CHANGED	.\pkttypes.h	166;"	d
+PKTTYPE_EVENT_WSP_TERMINATED	.\pkttypes.h	168;"	d
+PKTTYPE_EVENT_WSP_TIMER	.\pkttypes.h	167;"	d
+PKTTYPE_HEARTBEAT	.\pkttypes.h	33;"	d
+PKTTYPE_HEARTBEAT_SOCKET	.\pkttypes.h	34;"	d
+PKTTYPE_KEEPALIVE	.\pkttypes.h	387;"	d
+PKTTYPE_KPCDR	.\pkttypes.h	322;"	d
+PKTTYPE_KPCDR_ABIS	.\pkttypes.h	324;"	d
+PKTTYPE_KPCDR_BICC	.\pkttypes.h	330;"	d
+PKTTYPE_KPCDR_BSSAP	.\pkttypes.h	325;"	d
+PKTTYPE_KPCDR_BSSAPVOC	.\pkttypes.h	337;"	d
+PKTTYPE_KPCDR_CAP	.\pkttypes.h	327;"	d
+PKTTYPE_KPCDR_DNS	.\pkttypes.h	348;"	d
+PKTTYPE_KPCDR_FTP	.\pkttypes.h	335;"	d
+PKTTYPE_KPCDR_GB	.\pkttypes.h	326;"	d
+PKTTYPE_KPCDR_GI	.\pkttypes.h	333;"	d
+PKTTYPE_KPCDR_GN	.\pkttypes.h	332;"	d
+PKTTYPE_KPCDR_H248	.\pkttypes.h	331;"	d
+PKTTYPE_KPCDR_HTTP	.\pkttypes.h	340;"	d
+PKTTYPE_KPCDR_ICMP	.\pkttypes.h	334;"	d
+PKTTYPE_KPCDR_IMAP	.\pkttypes.h	352;"	d
+PKTTYPE_KPCDR_IUCS	.\pkttypes.h	328;"	d
+PKTTYPE_KPCDR_IUPS	.\pkttypes.h	329;"	d
+PKTTYPE_KPCDR_MAP	.\pkttypes.h	323;"	d
+PKTTYPE_KPCDR_MM3	.\pkttypes.h	344;"	d
+PKTTYPE_KPCDR_MM4	.\pkttypes.h	345;"	d
+PKTTYPE_KPCDR_MM7	.\pkttypes.h	346;"	d
+PKTTYPE_KPCDR_MMS	.\pkttypes.h	343;"	d
+PKTTYPE_KPCDR_MMSMGR	.\pkttypes.h	347;"	d
+PKTTYPE_KPCDR_PARLAY	.\pkttypes.h	355;"	d
+PKTTYPE_KPCDR_PIM	.\pkttypes.h	356;"	d
+PKTTYPE_KPCDR_POP3	.\pkttypes.h	351;"	d
+PKTTYPE_KPCDR_QQ	.\pkttypes.h	349;"	d
+PKTTYPE_KPCDR_RADIUS	.\pkttypes.h	336;"	d
+PKTTYPE_KPCDR_RTSP	.\pkttypes.h	353;"	d
+PKTTYPE_KPCDR_SIP	.\pkttypes.h	354;"	d
+PKTTYPE_KPCDR_SMGP	.\pkttypes.h	358;"	d
+PKTTYPE_KPCDR_SMPP	.\pkttypes.h	357;"	d
+PKTTYPE_KPCDR_SMTP	.\pkttypes.h	350;"	d
+PKTTYPE_KPCDR_TCP	.\pkttypes.h	338;"	d
+PKTTYPE_KPCDR_UDP	.\pkttypes.h	339;"	d
+PKTTYPE_KPCDR_WAP	.\pkttypes.h	342;"	d
+PKTTYPE_KPCDR_WSP	.\pkttypes.h	341;"	d
+PKTTYPE_MSG_INFORMATION	.\pkttypes.h	361;"	d
+PKTTYPE_RAWQUERY	.\pkttypes.h	86;"	d
+PKTTYPE_REPORT	.\pkttypes.h	372;"	d
+PKTTYPE_REPORT_ALARM	.\pkttypes.h	375;"	d
+PKTTYPE_REPORT_GATEWAY	.\pkttypes.h	373;"	d
+PKTTYPE_REPORT_STATUS	.\pkttypes.h	374;"	d
+PKTTYPE_SERVER_IMSI2IMEI	.\pkttypes.h	385;"	d
+PKTTYPE_SERVER_IMSI2MSISDN	.\pkttypes.h	380;"	d
+PKTTYPE_SERVER_MSISDN2IMSI	.\pkttypes.h	384;"	d
+PKTTYPE_SERVER_NODBUS	.\pkttypes.h	377;"	d
+PKTTYPE_SERVER_TMSI2CDRID	.\pkttypes.h	381;"	d
+PKTTYPE_SERVER_TMSI2IMEI	.\pkttypes.h	379;"	d
+PKTTYPE_SERVER_TMSI2IMSI	.\pkttypes.h	378;"	d
+PKTTYPE_SERVER_TMSI2LOCATION	.\pkttypes.h	382;"	d
+PKTTYPE_SERVER_TMSI2SESSIONID	.\pkttypes.h	383;"	d
+PKTTYPE_STATISTICS	.\pkttypes.h	363;"	d
+PKTTYPE_STATISTICS_FLOW	.\pkttypes.h	368;"	d
+PKTTYPE_STATISTICS_IP_FLOW	.\pkttypes.h	364;"	d
+PKTTYPE_STATISTICS_MTP_FLOW	.\pkttypes.h	367;"	d
+PKTTYPE_STATISTICS_SCTP_CHUNK	.\pkttypes.h	365;"	d
+PKTTYPE_STATISTICS_SCTP_DATA_FLOW	.\pkttypes.h	366;"	d
+PKTTYPE_UNKNOWNMSG	.\pkttypes.h	92;"	d
+PKTTYPE_WILDCARD	.\pkttypes.h	389;"	d
+PKTTYPE_XDR	.\pkttypes.h	36;"	d
+PKTTYPE_XDRRAWDATA	.\pkttypes.h	90;"	d
+PKT_2M_CHANNEL	.\pkt.h	126;"	d
+PKT_HTONL	.\pkt.h	40;"	d
+PKT_HTONL	.\pkt.h	45;"	d
+PKT_HTONS	.\pkt.h	39;"	d
+PKT_HTONS	.\pkt.h	44;"	d
+PKT_NTOHL	.\pkt.h	38;"	d
+PKT_NTOHL	.\pkt.h	43;"	d
+PKT_NTOHS	.\pkt.h	37;"	d
+PKT_NTOHS	.\pkt.h	42;"	d
+PKT_SC_UCHAR_POINTER	.\pkt.h	127;"	d
+PKT_SYNC_FLAG	.\pkt.h	93;"	d
+RSHash	.\hash.h	/^static __inline unsigned int RSHash(char* str, unsigned int len)$/;"	f
+RSHashUL	.\hash.h	/^static __inline unsigned long RSHashUL(unsigned long val, unsigned int bits)$/;"	f
+ReduceFreeMemBlock	.\MemAlloc_T.h	/^	unsigned int ReduceFreeMemBlock(void)$/;"	f	class:MemAlloc_T
+RobertJenkins32	.\hash.h	/^static __inline unsigned long RobertJenkins32(unsigned long val, unsigned int bits)$/;"	f
+RobertJenkins32Higher	.\hash.h	/^static __inline unsigned long RobertJenkins32Higher(unsigned long val, unsigned int bits)$/;"	f
+SDBMHash	.\hash.h	/^static __inline unsigned int SDBMHash(char* str, unsigned int len)$/;"	f
+SDBMHashUL	.\hash.h	/^static __inline unsigned long SDBMHashUL(unsigned long val, unsigned int bits)$/;"	f
+SETLGWRFILE	.\aplog.h	75;"	d
+SETLGWRLEVEL	.\aplog.h	76;"	d
+SETLGWRSIZE	.\aplog.h	77;"	d
+SHORT	.\os.h	/^typedef unsigned short  SHORT;$/;"	t
+SLEEP_MS	.\os.h	103;"	d
+SLEEP_MS	.\os.h	112;"	d
+SLEEP_MS	.\os.h	98;"	d
+SLEEP_S	.\os.h	101;"	d
+SLEEP_S	.\os.h	97;"	d
+SLEEP_US	.\os.h	104;"	d
+SLEEP_US	.\os.h	106;"	d
+SLEEP_US	.\os.h	99;"	d
+SOCKET	.\os.h	/^typedef int SOCKET;$/;"	t
+SOCKET_ERROR	.\os.h	174;"	d
+STRCASECMP	.\os.h	119;"	d
+STRCASECMP	.\os.h	122;"	d
+STRCASECMP	.\os.h	126;"	d
+STRNCASECMP	.\os.h	120;"	d
+STRNCASECMP	.\os.h	123;"	d
+STRNCASECMP	.\os.h	127;"	d
+SwapHashlong	.\hash.h	/^static __inline unsigned long SwapHashlong(unsigned long val, unsigned int bits)$/;"	f
+TCHAR	.\os.h	/^typedef char            TCHAR;$/;"	t
+TIMERLIST_ADD_TIMER	.\timermgr.h	48;"	d
+TIMERLIST_ADD_TIMER_BY_OFFSET	.\timermgr.h	50;"	d
+TIMERLIST_ADD_TIMER_BY_OFFSET_NOLOCK	.\timermgr.h	56;"	d
+TIMERLIST_ADD_TIMER_NOLOCK	.\timermgr.h	54;"	d
+TIMERLIST_ADD_TIMER_PERIODIC	.\timermgr.h	46;"	d
+TIMERLIST_ADD_TIMER_PERIODIC_NOLOCK	.\timermgr.h	52;"	d
+TIMERLIST_CREATE	.\timermgr.h	37;"	d
+TIMERLIST_DEL_TIMER	.\timermgr.h	58;"	d
+TIMERLIST_LOG	.\timermgr.h	44;"	d
+TIMERLIST_RELEASE	.\timermgr.h	39;"	d
+TIMERLIST_RUN	.\timermgr.h	41;"	d
+TIMERMGR_SOURCE_EXTERNAL	.\timermgr.h	25;"	d
+TIMERMGR_SOURCE_LOCAL	.\timermgr.h	24;"	d
+TIMERMGR_SOURCE_MAXIMUM	.\timermgr.h	26;"	d
+TIMER_MGR_ADD_HASHTBL_TIMER	.\timermgr.h	66;"	d
+TIMER_MGR_ADD_PKTQ_TIMER	.\timermgr.h	61;"	d
+TIMER_MGR_DEL_HASHTBL_TIMER	.\timermgr.h	68;"	d
+TIMER_MGR_DEL_PKTQ_TIMER	.\timermgr.h	63;"	d
+TRUE	.\os.h	150;"	d
+TYPE_BLANK	.\cconfig.h	31;"	d
+TYPE_COMMENT	.\cconfig.h	30;"	d
+TYPE_IS_CMD	.\pkt.h	307;"	d
+TYPE_SECTION	.\cconfig.h	27;"	d
+TYPE_TOKEN_SCALAR	.\cconfig.h	28;"	d
+TYPE_TOKEN_VECTOR	.\cconfig.h	29;"	d
+UCHAR	.\os.h	/^typedef unsigned char   UCHAR;$/;"	t
+UINT	.\os.h	/^typedef unsigned int    UINT;$/;"	t
+UINT_MAX	.\os.h	43;"	d
+UNLIKELY	.\os.h	224;"	d
+UNLIKELY	.\os.h	227;"	d
+WIN32_LEAN_AND_MEAN	.\os.h	234;"	d
+WIN32_LEAN_AND_MEAN	.\os.h	82;"	d
+WORD	.\os.h	/^typedef unsigned short  WORD;$/;"	t
+_	.\os.h	194;"	d
+_	.\os.h	198;"	d
+_DECODE_STRING	.\coding.h	146;"	d
+_HEAD_ADAPTER_1B49230D_52E00F49_5AF0C50F_H	.\adapter.h	10;"	d
+_HEAD_ADAPTER_CS_1B9D7B61_10298EC9_610D34B6_H	.\adapter_cs.h	40;"	d
+_HEAD_ADAPTER_IF6CLI_917D4DC5_1413BD75_2CCCBA9F_H	.\adapter_if6cli.h	10;"	d
+_HEAD_ADAPTER_IF6SVR_1A81E618_6BA239D1_237C43EC_H	.\adapter_if6svr.h	10;"	d
+_HEAD_ADAPTER_SS_57ED0E2E_48F726D0_56C4D66C_H	.\adapter_ss.h	24;"	d
+_HEAD_APFRM_06C11BD6_6363025A_015040E5_H	.\apfrm.h	10;"	d
+_HEAD_APLOG_69E74D13_2F1D009B_17D8494C_H	.\aplog.h	10;"	d
+_HEAD_CCONFIG_30473C2D_744CDECE_426C0B80_H	.\cconfig.h	10;"	d
+_HEAD_CODING_1E340A5C_63852368_790F459E_H	.\coding.h	10;"	d
+_HEAD_CSSOCKDEF_1A2A06A1_2805035D_14B397B6_H	.\cssockdef.h	10;"	d
+_HEAD_CTHREAD_2AE33A7C_2D207BC1_13FB83C8_H	.\cthread.h	10;"	d
+_HEAD_FIFO_6709DC94_0643CAFB_4628FB16_H	.\fifo.h	10;"	d
+_HEAD_FILTER_1B49230D_52E00F49_5AF0C50F_H	.\filter.h	10;"	d
+_HEAD_HASHTBL_2AD9A77F_69948251_4CD506DB_H	.\hashtbl.h	10;"	d
+_HEAD_HASH_732968DD_45737B9F_16867DAF_H	.\hash.h	10;"	d
+_HEAD_MISC_6EB38C1A_398FB171_008F79FE_H	.\misc.h	10;"	d
+_HEAD_MMALLOC_2935A66A_0E8348ED_4B59ABBD_H	.\mmalloc.h	10;"	d
+_HEAD_MUTEX_17175554_7711CC80_1956C87D_H	.\mutex.h	10;"	d
+_HEAD_OS_03192BC4_17DC8D5E_2207A466_H	.\os.h	10;"	d
+_HEAD_PKTTYPES_5B14EEFD_43D40048_2137398D_H	.\pkttypes.h	10;"	d
+_HEAD_PKT_21FE8CA9_3EA2D25B_19FC4711_H	.\pkt.h	10;"	d
+_HEAD_REFCNT_5D652D74_5EC26E2C_148F9465_H	.\refcnt.h	10;"	d
+_HEAD_SWDBUS_6AF41A37_13083F52_2DFB924C_H	.\swdbus.h	10;"	d
+_HEAD_TIMERMGR_34B76B10_2E045C45_37721BD0_H	.\timermgr.h	10;"	d
+__WORDSIZE	.\hash.h	17;"	d
+__buf	.\os.h	/^		struct seminfo     *__buf;$/;"	m	union:semun	typeref:struct:semun::seminfo
+__lgwr__handle	.\aplog.h	/^extern "C" void *__lgwr__handle;$/;"	v
+__timer_mgr_handle	.\timermgr.h	/^extern "C" void *__timer_mgr_handle;$/;"	v
+_pkthdr_get_len	.\pkt.h	/^static __inline unsigned short _pkthdr_get_len(pkt_hdr *ph)$/;"	f
+_pkthdr_set_len	.\pkt.h	/^static __inline void _pkthdr_set_len(pkt_hdr *ph, unsigned short len)$/;"	f
+_pkthdr_slow_get_len	.\pkt.h	/^static __inline unsigned short _pkthdr_slow_get_len(pkt_hdr *ph)$/;"	f
+_pkthdr_slow_set_len	.\pkt.h	/^static __inline void _pkthdr_slow_set_len(pkt_hdr *ph, unsigned short len)$/;"	f
+adap_pkt_cb	.\adapter.h	/^typedef void (*adap_pkt_cb)(int tid,$/;"	t
+adapter_cs_ioctl	.\adapter_cs.h	/^struct adapter_cs_ioctl {$/;"	s
+adapter_register_cs	.\adapter_cs.h	74;"	d
+adapter_register_cs_c	.\adapter_cs.h	72;"	d
+adapter_register_cs_cfgfile	.\adapter_cs.h	84;"	d
+adapter_register_cs_cfgfile_c	.\adapter_cs.h	82;"	d
+adapter_register_cs_cfgfile_i	.\adapter_cs.h	86;"	d
+adapter_register_cs_cfgstr	.\adapter_cs.h	94;"	d
+adapter_register_cs_cfgstr_c	.\adapter_cs.h	92;"	d
+adapter_register_cs_cfgstr_i	.\adapter_cs.h	96;"	d
+adapter_register_cs_i	.\adapter_cs.h	76;"	d
+adapter_ss_addr	.\adapter_ss.h	/^struct adapter_ss_addr {$/;"	s
+ap_framework	.\apfrm.h	/^struct ap_framework {$/;"	s
+arg	.\cthread.h	/^	LPVOID arg;$/;"	m	struct:thread_arg
+array	.\os.h	/^		unsigned short int *array;$/;"	m	union:semun
+bracket	.\filter.h	/^	unsigned char  bracket;$/;"	m	struct:FILTER
+buf	.\os.h	/^		struct semid_ds    *buf;$/;"	m	union:semun	typeref:struct:semun::semid_ds
+buffer	.\aplog.h	/^	char  buffer[BUFSIZ];$/;"	m	struct:lgwr_hd
+channel	.\pkt.h	/^	unsigned short  channel; \/* logical channel sequence number in a dev  *\/$/;"	m	struct:__anon3
+data	.\apfrm.h	/^	unsigned long  data;$/;"	m	struct:ap_framework
+date	.\aplog.h	/^	char  date[64];$/;"	m	struct:lgwr_hd
+device	.\pkt.h	/^	unsigned short  device;  \/* unique device identifier                  *\/$/;"	m	struct:__anon3
+etoken	.\cconfig.h	/^	struct stTOKEN  *etoken; \/* point to the first TYPE_TOKEN_*       *\/$/;"	m	struct:stLINE	typeref:struct:stLINE::stTOKEN
+fAlloc	.\MemAlloc_T.h	/^	Val_T *fAlloc()$/;"	f	class:MemAlloc_T
+fFree	.\MemAlloc_T.h	/^	void fFree(Val_T *ptrVal)$/;"	f	class:MemAlloc_T
+fIllegalType	.\cconfig.h	33;"	d
+fIsToken	.\cconfig.h	34;"	d
+filename	.\aplog.h	/^	char  filename[256];$/;"	m	struct:lgwr_hd
+filename	.\cconfig.h	/^	char       filename[128];$/;"	m	struct:stCCONFIG
+filter_option	.\filter_option.h	/^enum filter_option {$/;"	g
+flag	.\cthread.h	/^	int    flag;$/;"	m	struct:thread_arg
+flushnow	.\aplog.h	/^	int   flushnow;$/;"	m	struct:lgwr_hd
+fp	.\aplog.h	/^	FILE *fp;$/;"	m	struct:lgwr_hd
+gettext_noop	.\os.h	193;"	d
+gettext_noop	.\os.h	197;"	d
+hash_long	.\hash.h	/^static __inline unsigned long hash_long(unsigned long val, unsigned int bits)$/;"	f
+hash_ptr	.\hash.h	/^static __inline unsigned long hash_ptr(void *ptr, unsigned int bits)$/;"	f
+iCaseSensitive	.\cconfig.h	/^	int       iCaseSensitive;$/;"	m	struct:stCCONFIG
+iDirtyFlag	.\cconfig.h	/^	int       iDirtyFlag;$/;"	m	struct:stCCONFIG
+iIAmReady	.\cconfig.h	/^	int       iIAmReady;$/;"	m	struct:stCCONFIG
+iTokensPerLine	.\cconfig.h	/^	int       iTokensPerLine;$/;"	m	struct:stCCONFIG
+iTotalSections	.\cconfig.h	/^	int       iTotalSections;$/;"	m	struct:stCCONFIG
+iWriteNow	.\cconfig.h	/^	int       iWriteNow;$/;"	m	struct:stCCONFIG
+index	.\cconfig.h	/^	int              index;$/;"	m	struct:stTOKEN
+ip	.\adapter_cs.h	/^	char *ip;$/;"	m	struct:adapter_cs_ioctl
+ip	.\adapter_ss.h	/^	unsigned int ip;$/;"	m	struct:adapter_ss_addr
+key_t	.\os.h	/^typedef int             key_t;$/;"	t
+lchild	.\filter.h	/^	struct FILTER *lchild;$/;"	m	struct:FILTER	typeref:struct:FILTER::FILTER
+lchmax	.\misc.h	29;"	d
+lchmin	.\misc.h	28;"	d
+len	.\pkt.h	/^	unsigned short  len;     \/* number of words (4-byte), including hdr   *\/$/;"	m	struct:__anon3
+level	.\aplog.h	/^	int   level;$/;"	m	struct:lgwr_hd
+lgwr_hd	.\aplog.h	/^struct lgwr_hd {$/;"	s
+line	.\cconfig.h	/^	struct stLINE   *line;   \/* point to the line which contains      *\/$/;"	m	struct:stTOKEN	typeref:struct:stTOKEN::stLINE
+lines	.\cconfig.h	/^	stLine    *lines;$/;"	m	struct:stCCONFIG
+m_lock	.\MemAlloc_T.h	/^	void *m_lock;$/;"	m	class:MemAlloc_T
+m_nAllocCalledCount	.\MemAlloc_T.h	/^	int m_nAllocCalledCount;$/;"	m	class:MemAlloc_T
+m_nAllocMode	.\MemAlloc_T.h	/^	int m_nAllocMode;$/;"	m	class:MemAlloc_T
+m_nBaseSize	.\MemAlloc_T.h	/^	int m_nBaseSize;$/;"	m	class:MemAlloc_T
+m_nFreeCalledCount	.\MemAlloc_T.h	/^	int m_nFreeCalledCount;$/;"	m	class:MemAlloc_T
+m_nHeavyAllocCalledCount	.\MemAlloc_T.h	/^	int m_nHeavyAllocCalledCount;$/;"	m	class:MemAlloc_T
+m_nHeavyFreeCalledCount	.\MemAlloc_T.h	/^	int m_nHeavyFreeCalledCount;$/;"	m	class:MemAlloc_T
+m_nNodeSumNum	.\MemAlloc_T.h	/^	int m_nNodeSumNum;$/;"	m	class:MemAlloc_T
+m_nNodeUsingNum	.\MemAlloc_T.h	/^	int m_nNodeUsingNum;$/;"	m	class:MemAlloc_T
+m_nPerSize	.\MemAlloc_T.h	/^	int	 m_nPerSize;$/;"	m	class:MemAlloc_T
+m_nTotalMemSize	.\MemAlloc_T.h	/^	int m_nTotalMemSize;$/;"	m	class:MemAlloc_T
+m_ptrAllocHead	.\MemAlloc_T.h	/^	Node_T *m_ptrAllocHead;$/;"	m	class:MemAlloc_T
+m_ptrIdleHead	.\MemAlloc_T.h	/^	Node_T *m_ptrIdleHead;$/;"	m	class:MemAlloc_T
+m_ptrNext	.\MemAlloc_T.h	/^	Node_T *m_ptrNext;$/;"	m	class:MemNode_T
+m_ptrVal	.\MemAlloc_T.h	/^	Val_T  *m_ptrVal;$/;"	m	class:MemNode_T
+mod	.\misc.h	/^static __inline int mod(int i, int n)$/;"	f
+mutex	.\aplog.h	/^	void *mutex;$/;"	m	struct:lgwr_hd
+name	.\cconfig.h	/^	char            *name;$/;"	m	struct:stTOKEN
+next	.\cconfig.h	/^	struct stLINE   *next;   \/* next line                             *\/$/;"	m	struct:stLINE	typeref:struct:stLINE::stLINE
+next	.\cconfig.h	/^	struct stTOKEN  *next;   \/* point to the next token in this line  *\/$/;"	m	struct:stTOKEN	typeref:struct:stTOKEN::stTOKEN
+non	.\filter.h	/^	unsigned char  non;$/;"	m	struct:FILTER
+op	.\filter.h	/^	unsigned char  op;$/;"	m	struct:FILTER
+option_type	.\filter.h	/^	unsigned short option_type;$/;"	m	struct:FILTER
+parse_args	.\apfrm.h	/^	int (*parse_args)(int argc, char **argv);$/;"	m	struct:ap_framework
+pidfile	.\apfrm.h	/^	char *pidfile;$/;"	m	struct:ap_framework
+pkt_hdr	.\pkt.h	/^} pkt_hdr;$/;"	t	typeref:struct:__anon3
+pkt_verify	.\pkt.h	/^static __inline int pkt_verify(void *buf, int size)$/;"	f
+pkt_verify_slow	.\pkt.h	/^static __inline int pkt_verify_slow(void *buf, int size)$/;"	f
+pkthdr_get_channel	.\pkt.h	/^static __inline unsigned short pkthdr_get_channel(pkt_hdr *ph)$/;"	f
+pkthdr_get_data	.\pkt.h	/^static __inline unsigned char *pkthdr_get_data(pkt_hdr *ph)$/;"	f
+pkthdr_get_device	.\pkt.h	/^static __inline unsigned short pkthdr_get_device(pkt_hdr *ph)$/;"	f
+pkthdr_get_dlen	.\pkt.h	/^static __inline int pkthdr_get_dlen(pkt_hdr *ph)$/;"	f
+pkthdr_get_len	.\pkt.h	/^static __inline int pkthdr_get_len(pkt_hdr *ph)$/;"	f
+pkthdr_get_plen	.\pkt.h	/^static __inline int pkthdr_get_plen(pkt_hdr *ph)$/;"	f
+pkthdr_get_protocol	.\pkt.h	/^static __inline unsigned char pkthdr_get_protocol(pkt_hdr *ph)$/;"	f
+pkthdr_get_sc	.\pkt.h	/^static __inline unsigned char pkthdr_get_sc(pkt_hdr *ph)$/;"	f
+pkthdr_get_subtype	.\pkt.h	/^static __inline unsigned char pkthdr_get_subtype(pkt_hdr *ph)$/;"	f
+pkthdr_get_sync	.\pkt.h	/^static __inline unsigned short pkthdr_get_sync(pkt_hdr *ph)$/;"	f
+pkthdr_get_ts	.\pkt.h	/^static __inline void pkthdr_get_ts(pkt_hdr *ph, unsigned int *s, unsigned int *ns)$/;"	f
+pkthdr_get_ts_ns	.\pkt.h	/^static __inline unsigned int pkthdr_get_ts_ns(pkt_hdr *ph)$/;"	f
+pkthdr_get_ts_s	.\pkt.h	/^static __inline unsigned int pkthdr_get_ts_s(pkt_hdr *ph)$/;"	f
+pkthdr_get_type	.\pkt.h	/^static __inline unsigned char pkthdr_get_type(pkt_hdr *ph)$/;"	f
+pkthdr_next	.\pkt.h	/^static __inline pkt_hdr *pkthdr_next(pkt_hdr *ph)$/;"	f
+pkthdr_sc_clr_2m_channel	.\pkt.h	/^static __inline void pkthdr_sc_clr_2m_channel(pkt_hdr *ph)$/;"	f
+pkthdr_sc_clr_flen	.\pkt.h	/^static __inline void pkthdr_sc_clr_flen(pkt_hdr *ph)$/;"	f
+pkthdr_sc_get_flen	.\pkt.h	/^static __inline int pkthdr_sc_get_flen(pkt_hdr *ph)$/;"	f
+pkthdr_sc_is_2m_channel	.\pkt.h	/^static __inline int pkthdr_sc_is_2m_channel(pkt_hdr *ph)$/;"	f
+pkthdr_sc_set_2m_channel	.\pkt.h	/^static __inline void pkthdr_sc_set_2m_channel(pkt_hdr *ph)$/;"	f
+pkthdr_sc_set_flen	.\pkt.h	/^static __inline void pkthdr_sc_set_flen(pkt_hdr *ph, int flen)$/;"	f
+pkthdr_set_channel	.\pkt.h	/^static __inline void pkthdr_set_channel(pkt_hdr *ph, unsigned short channel)$/;"	f
+pkthdr_set_device	.\pkt.h	/^static __inline void pkthdr_set_device(pkt_hdr *ph, unsigned short dev)$/;"	f
+pkthdr_set_dlen	.\pkt.h	/^static __inline void pkthdr_set_dlen(pkt_hdr *ph, int datalen)$/;"	f
+pkthdr_set_plen	.\pkt.h	/^static __inline void pkthdr_set_plen(pkt_hdr *ph, int plen)$/;"	f
+pkthdr_set_protocol	.\pkt.h	/^static __inline void pkthdr_set_protocol(pkt_hdr *ph, unsigned char p)$/;"	f
+pkthdr_set_subtype	.\pkt.h	/^static __inline void pkthdr_set_subtype(pkt_hdr *ph, unsigned char st)$/;"	f
+pkthdr_set_sync	.\pkt.h	/^static __inline void pkthdr_set_sync(pkt_hdr *ph)$/;"	f
+pkthdr_set_ts	.\pkt.h	/^static __inline void pkthdr_set_ts(pkt_hdr *ph, unsigned int s, unsigned int ns)$/;"	f
+pkthdr_set_ts_ns	.\pkt.h	/^static __inline void pkthdr_set_ts_ns(pkt_hdr *ph, unsigned int ns)$/;"	f
+pkthdr_set_ts_s	.\pkt.h	/^static __inline void pkthdr_set_ts_s(pkt_hdr *ph, unsigned int s)$/;"	f
+pkthdr_set_type	.\pkt.h	/^static __inline void pkthdr_set_type(pkt_hdr *ph, unsigned char t)$/;"	f
+pkthdr_slow_get_channel	.\pkt.h	/^static __inline unsigned short pkthdr_slow_get_channel(pkt_hdr *ph)$/;"	f
+pkthdr_slow_get_device	.\pkt.h	/^static __inline unsigned short pkthdr_slow_get_device(pkt_hdr *ph)$/;"	f
+pkthdr_slow_get_dlen	.\pkt.h	/^static __inline int pkthdr_slow_get_dlen(pkt_hdr *ph)$/;"	f
+pkthdr_slow_get_len	.\pkt.h	/^static __inline int pkthdr_slow_get_len(pkt_hdr *ph)$/;"	f
+pkthdr_slow_get_plen	.\pkt.h	/^static __inline int pkthdr_slow_get_plen(pkt_hdr *ph)$/;"	f
+pkthdr_slow_get_protocol	.\pkt.h	/^static __inline unsigned char pkthdr_slow_get_protocol(pkt_hdr *ph)$/;"	f
+pkthdr_slow_get_sc	.\pkt.h	/^static __inline unsigned char pkthdr_slow_get_sc(pkt_hdr *ph)$/;"	f
+pkthdr_slow_get_subtype	.\pkt.h	/^static __inline unsigned char pkthdr_slow_get_subtype(pkt_hdr *ph)$/;"	f
+pkthdr_slow_get_sync	.\pkt.h	/^static __inline unsigned short pkthdr_slow_get_sync(pkt_hdr *ph)$/;"	f
+pkthdr_slow_get_ts	.\pkt.h	/^static __inline void pkthdr_slow_get_ts(pkt_hdr *ph, unsigned int *s, unsigned int *ns)$/;"	f
+pkthdr_slow_get_ts_ns	.\pkt.h	/^static __inline unsigned int pkthdr_slow_get_ts_ns(pkt_hdr *ph)$/;"	f
+pkthdr_slow_get_ts_s	.\pkt.h	/^static __inline unsigned int pkthdr_slow_get_ts_s(pkt_hdr *ph)$/;"	f
+pkthdr_slow_get_type	.\pkt.h	/^static __inline unsigned char pkthdr_slow_get_type(pkt_hdr *ph)$/;"	f
+pkthdr_slow_next	.\pkt.h	/^static __inline pkt_hdr *pkthdr_slow_next(pkt_hdr *ph)$/;"	f
+pkthdr_slow_sc_clr_2m_channel	.\pkt.h	/^static __inline void pkthdr_slow_sc_clr_2m_channel(pkt_hdr *ph)$/;"	f
+pkthdr_slow_sc_clr_flen	.\pkt.h	/^static __inline void pkthdr_slow_sc_clr_flen(pkt_hdr *ph)$/;"	f
+pkthdr_slow_sc_get_flen	.\pkt.h	/^static __inline int pkthdr_slow_sc_get_flen(pkt_hdr *ph)$/;"	f
+pkthdr_slow_sc_is_2m_channel	.\pkt.h	/^static __inline int pkthdr_slow_sc_is_2m_channel(pkt_hdr *ph)$/;"	f
+pkthdr_slow_sc_set_2m_channel	.\pkt.h	/^static __inline void pkthdr_slow_sc_set_2m_channel(pkt_hdr *ph)$/;"	f
+pkthdr_slow_sc_set_flen	.\pkt.h	/^static __inline void pkthdr_slow_sc_set_flen(pkt_hdr *ph, int flen)$/;"	f
+pkthdr_slow_set_channel	.\pkt.h	/^static __inline void pkthdr_slow_set_channel(pkt_hdr *ph, unsigned short channel)$/;"	f
+pkthdr_slow_set_device	.\pkt.h	/^static __inline void pkthdr_slow_set_device(pkt_hdr *ph, unsigned short dev)$/;"	f
+pkthdr_slow_set_dlen	.\pkt.h	/^static __inline void pkthdr_slow_set_dlen(pkt_hdr *ph, int datalen)$/;"	f
+pkthdr_slow_set_plen	.\pkt.h	/^static __inline void pkthdr_slow_set_plen(pkt_hdr *ph, int plen)$/;"	f
+pkthdr_slow_set_protocol	.\pkt.h	/^static __inline void pkthdr_slow_set_protocol(pkt_hdr *ph, unsigned char p)$/;"	f
+pkthdr_slow_set_subtype	.\pkt.h	/^static __inline void pkthdr_slow_set_subtype(pkt_hdr *ph, unsigned char st)$/;"	f
+pkthdr_slow_set_sync	.\pkt.h	/^static __inline void pkthdr_slow_set_sync(pkt_hdr *ph)$/;"	f
+pkthdr_slow_set_ts	.\pkt.h	/^static __inline void pkthdr_slow_set_ts(pkt_hdr *ph, unsigned int s, unsigned int ns)$/;"	f
+pkthdr_slow_set_ts_ns	.\pkt.h	/^static __inline void pkthdr_slow_set_ts_ns(pkt_hdr *ph, unsigned int ns)$/;"	f
+pkthdr_slow_set_ts_s	.\pkt.h	/^static __inline void pkthdr_slow_set_ts_s(pkt_hdr *ph, unsigned int s)$/;"	f
+pkthdr_slow_set_type	.\pkt.h	/^static __inline void pkthdr_slow_set_type(pkt_hdr *ph, unsigned char t)$/;"	f
+pkthdr_slow_type_is_cmd	.\pkt.h	/^static __inline int pkthdr_slow_type_is_cmd(pkt_hdr *ph)$/;"	f
+pkthdr_slow_valid_sync	.\pkt.h	/^static __inline int pkthdr_slow_valid_sync(pkt_hdr *ph)$/;"	f
+pkthdr_type_is_cmd	.\pkt.h	/^static __inline int pkthdr_type_is_cmd(pkt_hdr *ph)$/;"	f
+pkthdr_valid_sync	.\pkt.h	/^static __inline int pkthdr_valid_sync(pkt_hdr *ph)$/;"	f
+port	.\adapter_cs.h	/^	int   port;$/;"	m	struct:adapter_cs_ioctl
+port	.\adapter_ss.h	/^	int          port;$/;"	m	struct:adapter_ss_addr
+prev	.\cconfig.h	/^	struct stLINE   *prev;   \/* previous line                         *\/$/;"	m	struct:stLINE	typeref:struct:stLINE::stLINE
+protocol	.\pkt.h	/^	unsigned char   protocol;\/* protocol                                  *\/$/;"	m	struct:__anon3
+rchild	.\filter.h	/^	struct FILTER *rchild;$/;"	m	struct:FILTER	typeref:struct:FILTER::FILTER
+regex	.\filter.h	/^	void          *regex;$/;"	m	struct:FILTER
+run	.\apfrm.h	/^	int (*run)(long instance, unsigned long data);$/;"	m	struct:ap_framework
+sFilter	.\filter.h	/^} sFilter;$/;"	t	typeref:struct:FILTER
+sc	.\pkt.h	/^	unsigned char   sc;      \/* Status & Control: MSB 0 1 2 3 4 5 6 7 LSB *\/$/;"	m	struct:__anon3
+sections	.\cconfig.h	/^	stLine   **sections;$/;"	m	struct:stCCONFIG
+semun	.\os.h	/^	union semun {$/;"	u
+sigalrm_handle	.\apfrm.h	/^	void (*sigalrm_handle)(void);$/;"	m	struct:ap_framework
+siginfo_t	.\apfrm.h	26;"	d
+sigusr1_handle	.\apfrm.h	/^	void (*sigusr1_handle)(void);$/;"	m	struct:ap_framework
+sigusr2_handle	.\apfrm.h	/^	void (*sigusr2_handle)(void);$/;"	m	struct:ap_framework
+size	.\aplog.h	/^	unsigned long long  size;$/;"	m	struct:lgwr_hd
+smod	.\misc.h	/^static __inline int smod(int i, int n)$/;"	f
+smp_wmb	.\os.h	231;"	d
+smp_wmb	.\os.h	237;"	d
+snext	.\cconfig.h	/^	struct stTOKEN  *snext;  \/* point to the next token within a      *\/$/;"	m	struct:stTOKEN	typeref:struct:stTOKEN::stTOKEN
+stCCONFIG	.\cconfig.h	/^typedef struct stCCONFIG {$/;"	s
+stCConfig	.\cconfig.h	/^} stCConfig;$/;"	t	typeref:struct:stCCONFIG
+stLINE	.\cconfig.h	/^typedef struct stLINE {$/;"	s
+stLine	.\cconfig.h	/^} stLine;$/;"	t	typeref:struct:stLINE
+stTOKEN	.\cconfig.h	/^typedef struct stTOKEN {$/;"	s
+stToken	.\cconfig.h	/^} stToken;$/;"	t	typeref:struct:stTOKEN
+strdup	.\os.h	241;"	d
+strtoll	.\misc.h	59;"	d
+strtoull	.\misc.h	60;"	d
+subtype	.\pkt.h	/^	unsigned char   subtype; \/* packet subtype                            *\/$/;"	m	struct:__anon3
+sync	.\pkt.h	/^	unsigned short  sync;    \/* synchronization                           *\/$/;"	m	struct:__anon3
+sys_is_le	.\misc.h	/^static __inline int sys_is_le(void)$/;"	f
+thread_arg	.\cthread.h	/^struct thread_arg {$/;"	s
+timer_callback	.\timermgr.h	/^typedef void (*timer_callback)(unsigned int s, unsigned int ns,$/;"	t
+timezone	.\misc.h	/^struct timezone$/;"	s
+title	.\aplog.h	/^	char  title[LGWRLEVELS][16];$/;"	m	struct:lgwr_hd
+token	.\cconfig.h	/^	struct stTOKEN  *token;  \/* point to the first token in this line *\/$/;"	m	struct:stLINE	typeref:struct:stLINE::stTOKEN
+ts_ns	.\pkt.h	/^	unsigned int    ts_ns;   \/* timestamp, nanoseconds, [0, 999,999,999]  *\/$/;"	m	struct:__anon3
+ts_s	.\pkt.h	/^	unsigned int    ts_s;    \/* timestamp, seconds since Epoch            *\/$/;"	m	struct:__anon3
+type	.\cconfig.h	/^	int              type;$/;"	m	struct:stTOKEN
+type	.\filter.h	/^	unsigned char  type;$/;"	m	struct:FILTER
+type	.\pkt.h	/^	unsigned char   type;    \/* packet type                               *\/$/;"	m	struct:__anon3
+tz_dsttime	.\misc.h	/^  int  tz_dsttime;     \/* type of dst correction *\/$/;"	m	struct:timezone
+tz_minuteswest	.\misc.h	/^  int  tz_minuteswest; \/* minutes W of Greenwich *\/$/;"	m	struct:timezone
+usage	.\apfrm.h	/^	void (*usage)(char *progname);$/;"	m	struct:ap_framework
+val	.\os.h	/^		int                 val;$/;"	m	union:semun
+value	.\cconfig.h	/^	char            *value;$/;"	m	struct:stTOKEN
+value	.\filter.h	/^	unsigned char *value;$/;"	m	struct:FILTER
+value_len	.\filter.h	/^	unsigned int   value_len;$/;"	m	struct:FILTER
+value_type	.\filter.h	/^	unsigned char  value_type;$/;"	m	struct:FILTER
+version	.\apfrm.h	/^	void (*version)(char *progname);$/;"	m	struct:ap_framework
+~MemAlloc_T	.\MemAlloc_T.h	/^	~MemAlloc_T()$/;"	f	class:MemAlloc_T
+~MemNode_T	.\MemAlloc_T.h	/^	~MemNode_T()$/;"	f	class:MemNode_T
