@@ -25,7 +25,6 @@ DequeData::~DequeData()
 
 void DequeData::reset()
 {
-	setTimer(NULL);
 	del_preNode(getProcEnd());
 	setProc(0);
 	setMmeNode(NULL);

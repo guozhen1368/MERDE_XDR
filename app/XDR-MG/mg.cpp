@@ -25,7 +25,7 @@
 #include "cthread.h"
 #include "timermgr.h"
 #include "adapter.h"
-#include "adapter_cs.h"
+#include "adapter_if6cli.h"
 #include "adapter_ss.h"
 
 #include "mg_compose.h"
@@ -59,8 +59,6 @@ struct adap_info adap_in = { NULL, true, false, "Signal", 0, 0 };
 struct adap_info adap_out = { NULL, false, false, "sdtp", 0, 0 };
 
 struct thread_info redis_in = {NULL, "127.0.0.1", 6379, NULL}; 
-
-void *sdtp_client = NULL;
 
 
 static void mg_show_usage(char *progname)
@@ -149,8 +147,8 @@ static int start_adap_dbus(struct adap_info *info)
 			(char *)info->cfg_section, ap_is_running, mg_pkt);
 	}
 	else{
-		info->adap = adapter_register_cs_cfgfile_c(cfgfile,
-			(char *)info->cfg_section, ap_is_running, mg_pkt);
+		info->adap = adapter_register_if6cli_cfgfile(cfgfile,
+			(char *)info->cfg_section);
 	}
 
 	if (info->adap == NULL) {
@@ -260,7 +258,6 @@ static int init_env(void)
 		return -1;
 	}
 
-	sdtp_client = adap_out.adap;
 	TIMERLIST_ADD_TIMER_PERIODIC(tl, 60, (void *)&adap_in);
 	TIMERLIST_ADD_TIMER_PERIODIC(tl, 60, (void *)&adap_out);
 
@@ -274,6 +271,7 @@ static int mg_run(long instance, unsigned long data)
 {
 	pkt_hdr *ph;
 	int len;
+	int i = 0;
 
 	if (init_env() != 0) {
 		exit_env();
@@ -281,6 +279,12 @@ static int mg_run(long instance, unsigned long data)
 	}
 
 	while (ap_is_running()) {
+		if (i++ == 1000)
+		{
+			xdr_compose->runTimer();
+			i = 0;
+		}
+		
 		ph = (pkt_hdr *)adapter_read(adap_in.adap);
 		if (ph == NULL) {
 			SLEEP_MS(5);
@@ -298,7 +302,7 @@ static int mg_run(long instance, unsigned long data)
 	}
 
 	redis_in.redis->stop();
-	sleep(1);
+	//sleep(1);
 
 	mg_cb(0, 0, (void *)&adap_in, NULL);
 	mg_cb(0, 0, (void *)&adap_out, NULL);

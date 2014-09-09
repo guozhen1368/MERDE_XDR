@@ -8,6 +8,7 @@
 #include <aplog.h>
 #include "adapter.h"
 #include "os.h"
+#include "calc_xdrid.h"
 
 struct adap_info {
 	/* Adapter interface */
@@ -22,7 +23,6 @@ struct adap_info {
 	unsigned long long bytes;
 };
 
-extern void *sdtp_client;
 extern adap_info adap_out;
 
 DataParse::DataParse()
@@ -44,100 +44,106 @@ void DataParse::parse(void *data)
 		return;
 	}
 
-	_user = (struct merge_user_t *)pkthdr_get_data(ph);;
+	user_ = (struct merge_user_t *)pkthdr_get_data(ph);
+	lenth_ = pkthdr_get_dlen(ph);
+
+	if (lenth_ != PKT_NTOHS(user_->lenth))
+	{
+		LOGERROR("DataParse::parse  data ivalid dlen=%d ulen=%d!\n", lenth_, PKT_NTOHS(user_->lenth));
+	}
 }
 
 uint16_t DataParse::getLenth()
 {
-	return be16toh(_user->lenth);
+	return lenth_;
 }
 
 uint16_t DataParse::getCity()
 {
-	return _user->city;
+	return user_->city;
 }
 
 uint8_t  DataParse::getRat()
 {
-	return _user->rat;
+	return user_->rat;
 }
 
 uint64_t DataParse::getIMSI()
 {
-	return _user->imsi;
+	return user_->imsi;
 }
 
 uint64_t DataParse::getImei()
 {
-	return _user->imei;
+	return user_->imei;
 }
 
 unsigned char* DataParse::getMsisdn()
 {
-	return (unsigned char*)_user->msisdn;
+	return (unsigned char*)user_->msisdn;
 }
 
 
 uint8_t DataParse::getInterface()
 {
-	return _user->sig.interfac;
+	return user_->sig.interfac;
 }
 
 uint8_t DataParse::getProcedure()
 {
-	return _user->sig.procedure_type;
+	return user_->sig.procedure_type;
 }
 
 uint64_t DataParse::getStartTime()
 {
-	return _user->sig.procedure_start;
+	return user_->sig.procedure_start;
 }
 
 uint64_t DataParse::getEndTime()
 {
-	return _user->sig.procedure_end;
+	return user_->sig.procedure_end;
 }
 
 uint64_t DataParse::getStartLng()
 {
-	return _user->sig.start_loc_lng;
+	return user_->sig.start_loc_lng;
 }
 
 uint64_t DataParse::getStartLat()
 {
-	return _user->sig.start_loc_lat;
+	return user_->sig.start_loc_lat;
 }
 
 uint64_t DataParse::getEndLng()
 {
-	return _user->sig.end_loc_lng;
+	return user_->sig.end_loc_lng;
 }
 
 uint64_t DataParse::getEndLat()
 {
-	return _user->sig.end_loc_lat;
+	return user_->sig.end_loc_lat;
 }
 
 uint8_t DataParse::getStatus()
 {
-	return _user->sig.procedure_status;
+	return user_->sig.procedure_status;
 }
 
 uint8_t DataParse::getCause()
 {
-	return _user->sig.cause;
+	return user_->sig.cause;
 }
 
 xdr_merge_singal_t *DataParse::getSignalData()
 {
-	return &(_user->sig);
+	return &(user_->sig);
 }
 
-unsigned char *DataParse::getPrivData()
+unsigned char *DataParse::getPrivData() 
 {
 	if (getLenth() > sizeof(merge_user_t))
 	{
-		return (((unsigned char*)_user) + sizeof(merge_user_t));
+		return (((unsigned char*)user_) + sizeof(merge_user_t));
 	}
 
 	return NULL;
@@ -150,11 +156,9 @@ unsigned char *DataParse::getPrivData()
 
 
 MergeXdr::MergeXdr()
-	:_bufLen(0)
+	:bufLen_(0)
 {
-	memset(_buffer, 0xFF, BUF_LENTH);
-	_mergeHead = (struct xdr_merge_head_t*)_buffer;
-	_mergeSigHead = (struct xdr_merge_sig_head_t *)(_buffer + sizeof(xdr_merge_head_t));
+	reset();
 }
 
 MergeXdr::~MergeXdr()
@@ -164,16 +168,18 @@ MergeXdr::~MergeXdr()
 
 void MergeXdr::reset()
 {
-	_xdrNumber = 0;
-	_tmpXdrNumber = NULL;
-	_uu = NULL;
+	xdrNumber_ = 0;
+	tmpXdrNumber_ = NULL;
+	/*uu_ = NULL;
 	_s1 = NULL;
-	_x2 = NULL;
+	_x2 = NULL;*/
 
-	_mergeSig = NULL;
+	memset(buffer_, 0xFF, BUF_LENTH);
 
-	_bufLen = sizeof(pkt_hdr) + sizeof(xdr_merge_head_t);
-	memset(_buffer, 0xFF, BUF_LENTH);
+	mg_sig_ = (mg_sig_t *)buffer_;
+	bufLen_ = sizeof(mg_sig_t); 
+
+	mg_sig_->xdr_type = SDTP_XDR_MERGE;
 }
 
 void MergeXdr::upload(DequeData *dequeData)
@@ -198,28 +204,29 @@ void MergeXdr::upload(DequeData *dequeData)
 
 	//处理mme
 	{
-		_dataParse.parse(mme_node->xdr_data.data);
+		dataParse_.parse(mme_node->xdr_data.data);
 		fill_merge_head(mme);
 		fill_merge_sig_head(mme, proc);
 	}
 	
 	//处理first node
 	{
-		_dataParse.parse(begin_node->xdr_data.data);
+		dataParse_.parse(begin_node->xdr_data.data);
 		fill_merge_sig_head(first);
+		fill_merge_sig_head(middle);
 		fill_merge_sig(first);
-		_xdrNumber++;
+		xdrNumber_++;
 	}
 	
 	//处理 node
 	begin_node = begin_node->next;
-	while (begin_node != end_node->next && _xdrNumber < 254)
+	while (begin_node != end_node->next && xdrNumber_ < 254)
 	{
-		_dataParse.parse(begin_node->xdr_data.data);
+		dataParse_.parse(begin_node->xdr_data.data);
 		fill_merge_sig_head(middle);
 		fill_merge_sig(middle);
 
-		_xdrNumber++;
+		xdrNumber_++;
 		begin_node = begin_node->next;
 	}
 
@@ -236,20 +243,23 @@ void MergeXdr::fill_merge_head(enum satus stu)
 {
 	if (stu == mme)
 	{
-		_mergeHead->imsi = _dataParse.getIMSI();
-		_mergeHead->imei = _dataParse.getImei();
-		unsigned char *msisdn = _dataParse.getMsisdn();
-		memcpy(_mergeHead->msisdn, msisdn, 16);
-		_mergeHead->city = _dataParse.getCity();
-		_mergeHead->rat = _dataParse.getRat();
+		mg_sig_->mergeHead.imsi = dataParse_.getIMSI();
+		mg_sig_->mergeHead.imei = dataParse_.getImei();
+		unsigned char *msisdn = dataParse_.getMsisdn();
+		memcpy(mg_sig_->mergeHead.msisdn, msisdn, 16);
+		mg_sig_->mergeHead.city = dataParse_.getCity();
+		mg_sig_->mergeHead.rat = dataParse_.getRat();
+
+		XDRID id;
+		GenerateXdrId::instance()->getUniqueXdrid(id);
+		memcpy(mg_sig_->mergeHead.xdr_ID, &id, sizeof id);
 
 		//1：合成信令XDR
-		_mergeHead->xdr_type = 1;
+		mg_sig_->mergeHead.xdr_type = 1;
 	}
 	else if (stu == last)
 	{
-		_mergeHead->length = htole16(_bufLen);
-		memset(_mergeHead->xdr_ID, 0, sizeof _mergeHead->xdr_ID);
+		mg_sig_->mergeHead.length = htole16(bufLen_);
 	}
 }
 
@@ -257,118 +267,121 @@ void MergeXdr::fill_merge_sig_head(enum satus stu, uint8_t proc)
 {
 	if (stu == mme)
 	{
-		_mergeSigHead->type = proc;
+		mg_sig_->mergeSigHead.type = proc;
 
-		struct s1_mme_priv_t *s1 = (struct s1_mme_priv_t *)_dataParse.getPrivData();
+		struct s1_mme_priv_t *s1 = (struct s1_mme_priv_t *)dataParse_.getPrivData();
 		if (NULL == s1)
 		{
 			LOGERROR("MergeXdr : fill_merge_sig_head s1 is null");
 			return;
 		}
 
-		_mergeSigHead->keyword = s1->keyword;
-		_mergeSigHead->mme_group_ID = s1->mme_group_ID;
-		_mergeSigHead->mme_code = s1->mme_code;
-		_mergeSigHead->user_IPv4 = s1->user_IPv4;
-		memcpy(_mergeSigHead->user_IPv6, s1->user_IPv6, 16);
-		_mergeSigHead->tac = s1->tac;
-		_mergeSigHead->new_tac = s1->new_tac;
+		mg_sig_->mergeSigHead.keyword = s1->keyword;
+		mg_sig_->mergeSigHead.mme_group_ID = s1->mme_group_ID;
+		mg_sig_->mergeSigHead.mme_code = s1->mme_code;
+		mg_sig_->mergeSigHead.user_IPv4 = s1->user_IPv4;
+		memcpy(mg_sig_->mergeSigHead.user_IPv6, s1->user_IPv6, 16);
+		mg_sig_->mergeSigHead.tac = s1->tac;
+		mg_sig_->mergeSigHead.new_tac = s1->new_tac;
 
-		_mergeSigHead->procedure_status = _dataParse.getStatus();
+		mg_sig_->mergeSigHead.procedure_status = dataParse_.getStatus();
 
 
-		int len = _dataParse.getLenth() - sizeof(merge_user_t) - sizeof(s1_mme_priv_t) + 1;
-		memcpy(_mergeSigHead->data, s1->bear, len); 
+		int len = dataParse_.getLenth() - sizeof(merge_user_t) - sizeof(s1_mme_priv_t);
+		memcpy(mg_sig_->mergeSigHead.data, s1->bear, len); 
 
-		_bufLen += sizeof(xdr_merge_sig_head_t) + len -1;
-		_tmpXdrNumber = _buffer + _bufLen;
-		_bufLen++;
+		bufLen_ +=  len;
+		tmpXdrNumber_ = &buffer_[bufLen_];
+		bufLen_++;
 	}
 
 	if (stu == first)
 	{
-		_mergeSigHead->start_time = _dataParse.getStartTime();
-		_mergeSigHead->start_latitude = _dataParse.getStartLat();
-		_mergeSigHead->start_longitude = _dataParse.getStartLng();
+		mg_sig_->mergeSigHead.start_time = dataParse_.getStartTime();
+		mg_sig_->mergeSigHead.start_latitude = dataParse_.getStartLat();
+		mg_sig_->mergeSigHead.start_longitude = dataParse_.getStartLng();
 	}
 
 	if (stu == middle)
 	{
-		if (1 == _mergeSigHead->procedure_status 
-			&& 0xFF == _mergeSigHead->failure_interface
-			&& 1 == _dataParse.getStatus())
+		if (1 == mg_sig_->mergeSigHead.procedure_status 
+			&& 0xFF == mg_sig_->mergeSigHead.failure_interface
+			&& 1 == dataParse_.getStatus())
 		{
-			_mergeSigHead->failure_interface = _dataParse.getInterface();
-			uint16_t cause = _dataParse.getCause();/////? 大端
-			_mergeSigHead->failure_cause = htole16(cause);
+			mg_sig_->mergeSigHead.failure_interface = dataParse_.getInterface();
+			uint16_t cause = dataParse_.getCause();/////? 大端
+			mg_sig_->mergeSigHead.failure_cause = htole16(cause);
 		}
 
-		if ( XDR_TYPE_Uu == _dataParse.getInterface()
-			&& 0xFFFFFFFF == _mergeSigHead->cell_ID)
+		if ( XDR_TYPE_Uu == dataParse_.getInterface()
+			&& 0xFFFFFFFF == mg_sig_->mergeSigHead.cell_ID)
 		{
-			struct uu_priv_t *uu = (struct uu_priv_t *)_dataParse.getPrivData();
+			struct uu_priv_t *uu = (struct uu_priv_t *)dataParse_.getPrivData();
 			if (NULL == uu)
 			{
 				LOGERROR("MergeXdr : fill_merge_sig_head uu is null");
 				return;
 			}
 
-			_mergeSigHead->cell_ID = uu->cell_ID;
-			memcpy(&_mergeSigHead->eNB_ID, uu->eNB_ID, 3);/////?
+			mg_sig_->mergeSigHead.cell_ID = uu->cell_ID;
+			mg_sig_->mergeSigHead.eNB_ID = uu->eNB_ID;
 		}
 
-		if ( XDR_TYPE_X2 == _dataParse.getInterface()
-			&& 0xFFFFFFFF == _mergeSigHead->new_cell_ID)
+		if ( XDR_TYPE_X2 == dataParse_.getInterface()
+			&& 0xFFFFFFFF == mg_sig_->mergeSigHead.new_cell_ID)
 		{
-			struct x2_priv_t *x2 = (struct x2_priv_t *)_dataParse.getPrivData();
+			struct x2_priv_t *x2 = (struct x2_priv_t *)dataParse_.getPrivData();
 			if (NULL == x2)
 			{
 				LOGERROR("MergeXdr : fill_merge_sig_head x2 is null");
 				return;
 			}
 
-			_mergeSigHead->cell_ID = x2->cell_ID;
-			memcpy(&_mergeSigHead->eNB_ID, x2->eNB_ID, 3);/////?
-			_mergeSigHead->new_cell_ID = x2->new_cell_ID;
-			_mergeSigHead->new_eNB_ID = x2->new_eNB_ID;
-			_mergeSigHead->new_mme_code = x2->mme_code;
-			_mergeSigHead->new_mme_group_ID = x2->mme_group_ID;
+			mg_sig_->mergeSigHead.cell_ID = x2->cell_ID;
+			mg_sig_->mergeSigHead.eNB_ID = x2->eNB_ID;
+			mg_sig_->mergeSigHead.new_cell_ID = x2->new_cell_ID;
+			mg_sig_->mergeSigHead.new_eNB_ID = x2->new_eNB_ID;
+			mg_sig_->mergeSigHead.new_mme_code = x2->mme_code;
+			mg_sig_->mergeSigHead.new_mme_group_ID = x2->mme_group_ID;
 		
 		}
 	}
 
 	if (stu == last)
 	{
-		_mergeSigHead->end_time = _dataParse.getEndTime();
-		_mergeSigHead->end_latitude = _dataParse.getEndLat();
-		_mergeSigHead->end_longitude = _dataParse.getEndLng();
+		mg_sig_->mergeSigHead.end_time = dataParse_.getEndTime();
+		mg_sig_->mergeSigHead.end_latitude = dataParse_.getEndLat();
+		mg_sig_->mergeSigHead.end_longitude = dataParse_.getEndLng();
 		//统计单xdr数量
-		*_tmpXdrNumber = _xdrNumber;
+		*tmpXdrNumber_ = xdrNumber_;
 	}
 }
 
 void MergeXdr::fill_merge_sig(enum satus stu)
 {
-	xdr_merge_singal_t *sig = _dataParse.getSignalData();
+	xdr_merge_singal_t *sig = dataParse_.getSignalData();
 	if (NULL == sig)
 	{
 		LOGERROR("MergeXdr : fill_merge_sig sig is null");
 		return;
 	}
 
-	memcpy(_buffer+_bufLen, sig, sizeof(xdr_merge_singal_t));
-	_bufLen += sizeof(xdr_merge_singal_t);
+	memcpy(buffer_+bufLen_, sig, sizeof(xdr_merge_singal_t));
+	bufLen_ += sizeof(xdr_merge_singal_t);
 }
 
 void MergeXdr::sendData()
 {
-	int len = 0;
-	int totalLen = _bufLen;
-	unsigned char *buf = _buffer;
+	//int len = 0;
+	int totalLen = bufLen_;
+	unsigned char *buf = buffer_;
 
-	pkthdr_set_plen((pkt_hdr*)_buffer, _bufLen);
+	pkthdr_set_plen((pkt_hdr*)buffer_, bufLen_);
+	pkthdr_set_sync((pkt_hdr*)buffer_);
+	pkthdr_set_type((pkt_hdr*)buffer_, PKTTYPE_XDR);
 
-	if (NULL == sdtp_client)
+
+	if (NULL == adap_out.adap)
 	{
 		LOGERROR("MergeXdr : sendData sdtp_client is null");
 		return;
@@ -377,18 +390,20 @@ void MergeXdr::sendData()
 	++(adap_out.pkts);
 	adap_out.bytes += totalLen;
 
-	while (totalLen > 0)
-	{
-		len = adapter_write(sdtp_client, buf, totalLen);
-		if ( len < 0)
-		{
-			SLEEP_MS(5);
-			continue;
-		}
+	adapter_write(adap_out.adap, buf, totalLen);
 
-		totalLen -= len;
-		buf = buf + len;
+	/*while (totalLen > 0)
+	{
+	len = adapter_write(adap_out.adap, buf, totalLen);
+	if ( len < 0)
+	{
+	SLEEP_MS(5);
+	continue;
 	}
+
+	totalLen -= len;
+	buf = buf + len;
+	}*/
 }
 
 	 

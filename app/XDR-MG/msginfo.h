@@ -1,6 +1,10 @@
 #ifndef __XDR_MG_MSGINFO_H__
 #define __XDR_MG_MSGINFO_H__
 
+
+#define SDTP_XDR_MERGE   1
+#define SDTP_XDR_SINGLE  2
+
 enum Procedure_Status
 {
 	success = 0, //³É¹¦£»

@@ -1,0 +1,38 @@
+./ap_adapter.o: ap_adapter.cpp hlyt_hdr.h \
+ /home/yiyang/Fangxm/dpi/hlyt/include/os.h \
+ /home/yiyang/Fangxm/dpi/hlyt/include/apfrm.h \
+ /home/yiyang/Fangxm/dpi/hlyt/include/aplog.h \
+ /home/yiyang/Fangxm/dpi/hlyt/include/cconfig.h \
+ /home/yiyang/Fangxm/dpi/hlyt/include/pkt.h \
+ /home/yiyang/Fangxm/dpi/hlyt/include/pkttypes.h \
+ /home/yiyang/Fangxm/dpi/hlyt/include/misc.h \
+ /home/yiyang/Fangxm/dpi/hlyt/include/coding.h \
+ /home/yiyang/Fangxm/dpi/hlyt/include/cthread.h \
+ /home/yiyang/Fangxm/dpi/hlyt/include/os.h \
+ /home/yiyang/Fangxm/dpi/hlyt/include/timermgr.h \
+ /home/yiyang/Fangxm/dpi/hlyt/include/swdbus.h \
+ /home/yiyang/Fangxm/dpi/hlyt/include/adapter.h \
+ /home/yiyang/Fangxm/dpi/hlyt/include/adapter_cs.h \
+ /home/yiyang/Fangxm/dpi/hlyt/include/cssockdef.h \
+ /home/yiyang/Fangxm/dpi/hlyt/include/adapter_ss.h \
+ /home/yiyang/Fangxm/dpi/hlyt/include/adapter_if6cli.h ap_adapter.h
+ap_adapter.cpp:
+hlyt_hdr.h:
+/home/yiyang/Fangxm/dpi/hlyt/include/os.h:
+/home/yiyang/Fangxm/dpi/hlyt/include/apfrm.h:
+/home/yiyang/Fangxm/dpi/hlyt/include/aplog.h:
+/home/yiyang/Fangxm/dpi/hlyt/include/cconfig.h:
+/home/yiyang/Fangxm/dpi/hlyt/include/pkt.h:
+/home/yiyang/Fangxm/dpi/hlyt/include/pkttypes.h:
+/home/yiyang/Fangxm/dpi/hlyt/include/misc.h:
+/home/yiyang/Fangxm/dpi/hlyt/include/coding.h:
+/home/yiyang/Fangxm/dpi/hlyt/include/cthread.h:
+/home/yiyang/Fangxm/dpi/hlyt/include/os.h:
+/home/yiyang/Fangxm/dpi/hlyt/include/timermgr.h:
+/home/yiyang/Fangxm/dpi/hlyt/include/swdbus.h:
+/home/yiyang/Fangxm/dpi/hlyt/include/adapter.h:
+/home/yiyang/Fangxm/dpi/hlyt/include/adapter_cs.h:
+/home/yiyang/Fangxm/dpi/hlyt/include/cssockdef.h:
+/home/yiyang/Fangxm/dpi/hlyt/include/adapter_ss.h:
+/home/yiyang/Fangxm/dpi/hlyt/include/adapter_if6cli.h:
+ap_adapter.h:

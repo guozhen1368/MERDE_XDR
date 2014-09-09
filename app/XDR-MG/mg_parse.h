@@ -41,7 +41,8 @@ public:
 
 private:
 
-	struct merge_user_t *_user;
+	struct merge_user_t *user_;
+	uint16_t lenth_;
 };
 
 class MergeXdr : boost::noncopyable
@@ -67,20 +68,28 @@ private:
 	void fill_merge_sig(enum satus stu);
 	void sendData();
 
-	struct xdr_merge_head_t *_mergeHead;
-	struct xdr_merge_sig_head_t *_mergeSigHead;
-	struct xdr_merge_singal_t *_mergeSig;
+	struct mg_sig_t{
+		pkt_hdr              ph;
+		uint8_t              xdr_type;
+		xdr_merge_head_t     mergeHead;
+		xdr_merge_sig_head_t mergeSigHead;
+	};
 
-	DataParse _dataParse;
-	struct uu_priv_t *_uu;
+	mg_sig_t *mg_sig_;
+	//pkt_hdr          *ph_;
+	//struct xdr_merge_head_t *mergeHead_;
+	//struct xdr_merge_sig_head_t *mergeSigHead_;
+
+	DataParse dataParse_;
+	/*struct uu_priv_t *uu_;
 	struct s1_mme_priv_t *_s1;
-	struct x2_priv_t *_x2;
+	struct x2_priv_t *_x2;*/
 
-	unsigned char *_tmpXdrNumber;
-	uint8_t _xdrNumber;
+	unsigned char *tmpXdrNumber_;
+	uint8_t xdrNumber_;
 	static const int BUF_LENTH = 64*1024;
-	unsigned char _buffer[64*1024];
-	uint16_t _bufLen;
+	unsigned char buffer_[64*1024];
+	uint16_t bufLen_;
 };
 
 #endif //__XDR_MG_PARSE_H__

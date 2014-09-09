@@ -23,10 +23,8 @@ public:
 
 	bool init();
 	void deal_xdr(pkt_hdr *ph);
-
-	void setXdrId(uint64_t xdrid);
-	uint64_t getXdrId();
-
+	void runTimer();
+	
 private:
 	bool set_procedure(uint8_t proc);
 	int match_procedure();
@@ -45,9 +43,6 @@ private:
 	DequeData *_dequeData;
 	void* _pTimerList;
 	RedisHelp *_redis;
-
-	uint64_t curXdrID_;
-	uint64_t maxXdrID_;
 
 public:
 	void* _mutex;

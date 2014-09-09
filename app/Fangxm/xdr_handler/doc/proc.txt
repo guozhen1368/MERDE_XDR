@@ -1,0 +1,100 @@
+data structure:
+	struct xdr_pkt_t {
+		int      pkt_len;
+		byte     pkt[XDR_LEN_MAX];
+	};
+
+	/* XDR-U */
+	struct map_key_t {
+		uint32_t mme_ue_s1ap_id;
+		uint16_t mme_group_id;
+		uint8_t  mme_code;
+	};
+
+	struct map_val_t {
+		int      filled;
+		byte     imsi[8];
+		byte     imei[8];
+		byte     msisdn[16];
+		byte     enb_id[3];
+		byte     cell_id[4];
+		time_t   last_arrived;
+
+		list<struct xdr_pkt_t> lst;
+	};
+
+	map<struct map_key_t, struct map_val_t> xdr_map;
+	pthread_mutex_t map_mtx = PTHREAD_MUTEX_INITIALIZER;
+
+	/* XDR-S */
+	struct map_val_t {
+		byte     imei[8];
+		byte     msisdn[16];
+		time_t   last_arrived;
+
+		list<struct xdr_pkt_t> lst;
+	};
+
+	map<uint64_t, struct map_val_t> xdr_map;
+	pthread_mutex_t map_mtx = PTHREAD_MUTEX_INITIALIZER;
+
+recv data thread:
+	/* XDR-U */
+	* get "mme_ue_s1ap_id, mme_group_id, mme_code" from XDR, use these
+	  fields as key to find node in map.
+	* insert key:
+	    * if key not in map, insert it.
+	        * key: {mme_ue_s1ap_id, mme_group_id, mme_code}
+		* val:  filled     = 0;
+			imsi[8]    = {0xFF};
+			imei[8]    = {0xFF};
+			msisdn[16] = {0xFF};
+			enb_id[3]  = {0xFF};
+			cell_id[4] = {0xFF};
+			last_arrived = time(NULL);
+	* insert pkt:
+	    * insert XDR to the list under the key.
+	    * update last_arrived field.
+	* fill fields "IMSI, IMEI, MSISDN":
+	    [] if filled == 0:
+	        * if XDR interface is S1-MME, copy "IMSI, IMEI, MSISDN" to
+		  key; filled -> 1.
+            [] update database D1:
+	        * if XDR interface is UU, and "eNode-B, CellID" in XDR not
+		equal in key, update(key: MMEUES1AP_ID, enb_id, cell_id;
+		val: imsi, imei, msisdn).
+		* else if XDR interface is X2: delete(key: MMEUES1AP_ID,
+		src_enb_id, src_cell_id), insert(key: MMEUES1AP_ID,
+		dst_enb_id, dst_cell_id).
+	    [] if filled == 1:
+	        * send XDR's hold list to merge module and application layer.
+		  if send success, clear list.
+
+	/* XDR-S */
+	* get "imsi" from XDR header, find node in map.
+	* insert key:
+	    * if key not in map, insert it.
+		byte     imei[8]    = {0xFF};
+		byte     msisdn[16] = {0xFF};
+		int      filled     = 0;
+	* insert pkt:
+	    * insert XDR to the list under the key.
+	    * update last_arrived field.
+	* fill fields "IMEI, MSISDN":
+	    [] if filled == 0:
+	        * if XDR interface is S1-MME, copy "IMEI, MSISDN" to
+		  key; filled -> 1.
+	    [] if filled == 1:
+	        * send XDR's hold list to merge module and application layer.
+		  if send success, clear list.
+
+map_check_thread:
+	LOCK(map_mtx) travel xdr_map
+
+	if current - last_arrived > 60 seconds
+	        * send XDR's hold list to application layer.
+		  if send success, clear list.
+
+	* next node
+
+	UNLOCK(map_mtx)

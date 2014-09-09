@@ -1,0 +1,1 @@
+appsvr_proxy: main.o ap_adapter.o

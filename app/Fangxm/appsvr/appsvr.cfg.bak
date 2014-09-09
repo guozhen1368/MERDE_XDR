@@ -1,0 +1,18 @@
+#
+# appsvr.cfg
+#
+
+[Data.Archive]
+basename        = /tmp/XDR
+suffix          = .dat
+
+# MByte
+filesz          = 100
+
+[Adapter.Recv]
+port            = 60000
+authorized user = yiyang:123456
+version         = 3.0
+# wait/ignore
+Signal Data Response = wait
+Pass Authentication = true

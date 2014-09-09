@@ -51,7 +51,7 @@ struct xdr_merge_sig_head_t
 	uint8_t new_mme_code;
 	uint16_t new_tac; ////23
 	//uint8_t eps_bearer_number;
-	unsigned char data[1];
+	unsigned char data[0];
 	//some bearer
 	// .....
 
@@ -122,7 +122,7 @@ struct s1_mme_priv_t{
 	uint16_t tac;
 	uint16_t new_tac;
 
-	unsigned char bear[1];
+	unsigned char bear[0];
 	//后续字段成组出现
 	/*EPS Bearer Number
 	Bearer 1 ID
@@ -139,7 +139,7 @@ struct s1_mme_priv_t{
 struct uu_priv_t{
 	uint16_t mme_group_ID;
 	uint8_t mme_code;
-	byte eNB_ID[3];
+	uint32_t eNB_ID;
 	uint32_t cell_ID;
 };
 #pragma pack()
@@ -148,7 +148,7 @@ struct uu_priv_t{
 struct x2_priv_t{
 	uint16_t mme_group_ID;
 	uint8_t mme_code;
-	byte eNB_ID[3];
+	uint32_t eNB_ID;
 	uint32_t cell_ID;
 	uint32_t new_eNB_ID;
 	uint32_t new_cell_ID;

@@ -1,0 +1,1 @@
+appsvr: main.o ap_adapter.o xdr_save.o

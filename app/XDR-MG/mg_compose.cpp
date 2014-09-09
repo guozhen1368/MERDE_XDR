@@ -37,21 +37,6 @@ struct key_info key_begin[18][2] = {
 	{{XDR_TYPE_Uu, RRC_CONN_STP}, {XDR_TYPE_SGs, PAGING}}, //CSFB = 17
 };
 
-static void getRedisIncrCallback(redisAsyncContext *c, void *r, void *privdata) {
-	redisReply *reply = (redisReply *)r;
-	if (reply == NULL) return;
-	
-	XdrCompose *xdr = (XdrCompose*)privdata;
-	if (NULL == xdr)
-	{
-		LOGERROR("XdrCompose : getRedisIncrCallback xdr is null");
-		return;
-	}
-	xdr->setXdrId(reply->integer);
-	LOGINFO("XdrCompose : getRedisIncrCallback xdrid =%llu.", reply->integer);
-
-}
-
 static void getRedisCallback(redisAsyncContext *c, void *r, void *privdata) {
 	redisReply *reply = (redisReply *)r;
 	if (reply == NULL) return;
@@ -78,6 +63,7 @@ static void XdrTimeoutCallback(unsigned int s, unsigned int ns,
 	{
 		mutex_lock(compose->_mutex);
 		compose->_queReady.push(de);
+		de->setTimer(NULL);
 		mutex_unlock(compose->_mutex);
 	}
 }
@@ -85,9 +71,7 @@ static void XdrTimeoutCallback(unsigned int s, unsigned int ns,
 XdrCompose::XdrCompose(int id, unsigned long hd, RedisHelp *redis)
 	:_id(id),
 	_dequeData(NULL),
-	_redis(redis),
-	curXdrID_(0),
-	maxXdrID_(0)
+	_redis(redis)
 {
 
 }
@@ -97,6 +81,7 @@ XdrCompose::~XdrCompose()
 	if (_pTimerList)
 	{
 		timer_mgr_release_timerlist(NULL, _pTimerList);
+		_pTimerList = NULL;
 	}
 
 	if (_mutex)
@@ -107,8 +92,7 @@ XdrCompose::~XdrCompose()
 
 bool XdrCompose::init()
 {
-	_pTimerList = timer_mgr_create_timerlist(NULL, TIMERMGR_SOURCE_LOCAL,
-		XdrTimeoutCallback, this, "xdrcompose");
+	_pTimerList = timer_mgr_create_timerlist(NULL, TIMERMGR_SOURCE_LOCAL, XdrTimeoutCallback, this, "xdrcompose");
 	if (_pTimerList == NULL) {
 		LOGERROR("XdrCompose: Failed to create timerlist.");
 		return false;
@@ -121,28 +105,14 @@ bool XdrCompose::init()
 		return false;
 	}
 
-	getXdrId();
-
 	return true;
 }
 
-uint64_t XdrCompose::getXdrId()
+void XdrCompose::runTimer()
 {
-	static const char *xdrid = "SIG_XDR_ID";
-	if (_redis && maxXdrID_-curXdrID_ < 10)
+	if (_pTimerList)
 	{
-		_redis->AsyncIncrGet(getRedisIncrCallback, this, xdrid, strlen(xdrid));
-	}
-
-	return curXdrID_==0?curXdrID_:curXdrID_++;
-}
-
-void XdrCompose::setXdrId(uint64_t xdrid)
-{
-	maxXdrID_ = xdrid;
-	if (0 == curXdrID_)
-	{
-		curXdrID_ = maxXdrID_ - 99;
+		timer_mgr_run_timerlist(NULL, _pTimerList, 0, 0);
 	}
 }
 
@@ -161,7 +131,8 @@ void XdrCompose::deal_xdr(pkt_hdr *ph)
 	//将data插入以imsi为key的链表
 	_dequeData = _userdata.insert(imsi, startTime, ph);
 
-	_redis->AsyncCommandGet(getRedisCallback, _dequeData, (char*)&imsi, sizeof(uint64_t));
+	if (0)
+		_redis->AsyncCommand(getRedisCallback, _dequeData, "GET %b", (char*)&imsi, sizeof(uint64_t));
 
 	//匹配流程类型、上报
 	match_procedure();
@@ -172,12 +143,12 @@ void XdrCompose::deal_xdr(pkt_hdr *ph)
 
 bool XdrCompose::set_procedure(uint8_t proc)
 {
-	//匹配消息尾开头
-	match_begin(proc);
-
 	//上报此流程消息头结点之前的数据
 	if (0 != _dequeData->getProc())
 	{
+		//匹配消息尾开头
+		match_begin(proc);
+
 		void *timer = _dequeData->getTimer();
 		if (timer) {
 			TIMERLIST_DEL_TIMER(_pTimerList, timer);
@@ -194,13 +165,15 @@ bool XdrCompose::set_procedure(uint8_t proc)
 	void *timer = TIMERLIST_ADD_TIMER_BY_OFFSET(_pTimerList, 2, 0, _dequeData);
 	_dequeData->setTimer(timer);
 
+	LOGINFO("XdrCompose::set_procedure procedure = %d", proc);
+
 	return true;
 }
 
 int XdrCompose::match_procedure()
 {
 	//当前流程匹配
-	
+	LOGINFO("XdrCompose::match_procedure interface = %d", _parse.getInterface());
 	if (XDR_TYPE_S1_MME != _parse.getInterface())
 	{
 		return 0;
@@ -357,7 +330,7 @@ void XdrCompose::dealTimer()
 		mutex_unlock(_mutex);
 
 		//timer == null uploadXdr exec in set_procedure()
-		if (NULL == de || NULL == de->getTimer())
+		if (NULL == de)
 		{
 			continue;
 		}
